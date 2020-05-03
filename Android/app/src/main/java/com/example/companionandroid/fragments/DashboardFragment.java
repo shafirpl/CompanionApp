@@ -49,14 +49,17 @@ public class DashboardFragment extends Fragment {
                     * need to do this weird stuff, where the first item in the linear layout at index 0 and second item at index 1 etc
                     * since text view is the second item, we use index 1 to retrieve it
                      */
-                    ViewGroup viewGroup = (ViewGroup) cardView.getChildAt(0);
-                    String text = ((TextView) viewGroup.getChildAt(1)).getText().toString();
+//                    ViewGroup viewGroup = (ViewGroup) cardView.getChildAt(0);
+//                    String text = ((TextView) viewGroup.getChildAt(1)).getText().toString();
                     FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                     /*
                     * https://www.youtube.com/watch?v=ONR94DlQFcA&t=9s
                     * Watch from 9 minutes mark
                      */
-                    Fragment thisFragment = new MilesToKm();
+                    Fragment thisFragment = new FragmentNotFound();
+                    if (cardView.getId() == R.id.miles_km){
+                        thisFragment = new MilesToKm();
+                    }
                     fragmentTransaction.replace(R.id.fragment_layout,thisFragment);
                     fragmentTransaction.commit();
 
