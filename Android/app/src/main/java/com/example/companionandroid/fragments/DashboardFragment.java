@@ -4,13 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
+
+import androidx.fragment.app.FragmentTransaction;
+import androidx.gridlayout.widget.GridLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+
+
 
 import com.example.companionandroid.R;
 
@@ -47,6 +51,15 @@ public class DashboardFragment extends Fragment {
                      */
                     ViewGroup viewGroup = (ViewGroup) cardView.getChildAt(0);
                     String text = ((TextView) viewGroup.getChildAt(1)).getText().toString();
+                    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                    /*
+                    * https://www.youtube.com/watch?v=ONR94DlQFcA&t=9s
+                    * Watch from 9 minutes mark
+                     */
+                    Fragment thisFragment = new MilesToKm();
+                    fragmentTransaction.replace(R.id.fragment_layout,thisFragment);
+                    fragmentTransaction.commit();
+
                 }
             });
 
