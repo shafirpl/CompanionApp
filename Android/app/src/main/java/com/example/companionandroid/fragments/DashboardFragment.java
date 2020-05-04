@@ -7,13 +7,11 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.FragmentTransaction;
 import androidx.gridlayout.widget.GridLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-
 
 
 import com.example.companionandroid.R;
@@ -59,6 +57,12 @@ public class DashboardFragment extends Fragment {
                     Fragment thisFragment = new FragmentNotFound();
                     if (cardView.getId() == R.id.miles_km){
                         thisFragment = new MilesToKm();
+                    }
+                    else if(cardView.getId() == R.id.kg_lbs){
+                        thisFragment = new KgToLbs();
+                    }
+                    else if(cardView.getId() == R.id.usd_cad_card){
+                        thisFragment = new UsdToCad();
                     }
                     fragmentTransaction.replace(R.id.fragment_layout,thisFragment);
                     fragmentTransaction.commit();

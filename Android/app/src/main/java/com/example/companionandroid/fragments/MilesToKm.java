@@ -26,6 +26,11 @@ import com.example.companionandroid.R;
 public class MilesToKm extends Fragment {
     EditText milesEditText;
     TextView kmTextView;
+    /*
+    * we use Double instead of double because Double is an object, which allows us to have
+    * access to class methods such as toString, which we need to convert our double to strings.
+    * I am sure there are other ways to acheive this but I tend to do it this way
+     */
     Double miles;
     Double kilometers;
     final Double conversionRate = 1.60934;
@@ -65,6 +70,13 @@ public class MilesToKm extends Fragment {
                     kilometerBuilder += " km";
                     kmTextView.setText(kilometerBuilder);
                 } else{
+                    /*
+                    * We have this part because if we didn't have this part, when the user
+                    * erases all the text, there is blank text view because our text view only updates when
+                    * there is some text. To fix that issue, this part runs if the editText is empty so we just
+                    * set km. To see the effect, comment out this part and see what happens when we erases everything on
+                    * the text view
+                     */
                     kmTextView.setText("Km");
                 }
 
