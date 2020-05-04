@@ -31,7 +31,7 @@
 <!--        Also to make the cursor at top left, we do gravity top left-->
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/descriptionEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="16dp"
