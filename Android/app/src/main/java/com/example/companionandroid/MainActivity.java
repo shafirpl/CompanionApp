@@ -19,7 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
     public static int something;
     //public static final String url = "http://10.0.2.2:5000/notes";
-    public static final String url = "http://192.168.0.116:5000/notes";
+    public static final String url = "http://138.68.61.175:5500/notes";
 
 
 
