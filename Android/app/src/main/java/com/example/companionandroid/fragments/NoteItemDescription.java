@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,58 +25,66 @@ import com.example.companionandroid.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.UUID;
 
-
-public class NoteFragment extends Fragment {
-    // recall to enable cleartext in android mainfest.xml file
-    // android:usesCleartextTraffic="true"
-    Button addNoteButton;
-    EditText titleEditText;
-    EditText descriptionEditText;
-    // use 10.0.2.2:portNumber when using emulator
-    // final String url = "http://192.168.0.116:5000/notes";
+public class NoteItemDescription extends Fragment {
+    String title;
+    String description;
+    String noteId;
+    EditText titleShowEditText;
+    EditText descriptionShowEditText;
+    String urlBuilder;
+    Button editNoteButton;
     @Nullable
     @Override
+    /*
+    * to grab data
+    * https://stackoverflow.com/questions/16036572/how-to-pass-values-between-fragments
+     */
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_note,container,false);
+        View view = inflater.inflate(R.layout.fragment_note_item_description,container,false);
+        title = getArguments().getString("title");
+        description = getArguments().getString("description");
+        noteId = getArguments().getString("noteId");
         return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        addNoteButton = (Button) view.findViewById(R.id.addNoteButton);
-        titleEditText = (EditText) view.findViewById(R.id.titleEditText);
-        descriptionEditText = (EditText) view.findViewById(R.id.descriptionEditText);
+        titleShowEditText = (EditText) view.findViewById(R.id.titleShowEditText);
+        descriptionShowEditText = (EditText) view.findViewById(R.id.descriptionShowEditText);
+        editNoteButton = (Button) view.findViewById(R.id.editNoteButton);
 
-        addNoteButton.setOnClickListener(new View.OnClickListener() {
+        titleShowEditText.setText(title);
+        descriptionShowEditText.setText(description);
+
+        urlBuilder = MainActivity.url + "/" + noteId;
+
+        editNoteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    submitRequest(titleEditText.getText().toString(),descriptionEditText.getText().toString());
-                    Log.i("Add Note Button","Clicked");
+                    updateNote();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
         });
+
+
     }
 
-    private void submitRequest(final String title, String description) throws JSONException {
-        String noteId = UUID.randomUUID().toString();
+    public void updateNote() throws JSONException {
         RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("noteId",noteId);
-        jsonObject.put("title",title);
-        jsonObject.put("description",description);
-
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, MainActivity.url, jsonObject, new Response.Listener<JSONObject>() {
+        jsonObject.put("title",titleShowEditText.getText());
+        jsonObject.put("description",descriptionShowEditText.getText());
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, urlBuilder, jsonObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    if(response.getString("title").equals(title)){
-                        Toast.makeText(getContext(),"Note Added", Toast.LENGTH_SHORT).show();
-                    };
+                    if(response.getInt("done") == 1){
+                        Toast.makeText(getContext(),"Note Edited",Toast.LENGTH_SHORT).show();
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

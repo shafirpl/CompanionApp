@@ -15,7 +15,11 @@ public class CustomFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.custom_fragment,container,false);
+        // View view = inflater.inflate(R.layout.custom_fragment,container,false);
+        /* TODO
+        * Letter revert back to this view when the custom fragement is done
+        * */
+        View view = inflater.inflate(R.layout.fragment_not_found,container,false);
         return view;
     }
 }
