@@ -12,6 +12,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
+            android:windowSoftInputMode="adjustNothing"
             android:screenOrientation="portrait">
 
             <intent-filter>

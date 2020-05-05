@@ -29,10 +29,13 @@ import java.util.UUID;
 
 
 public class NoteFragment extends Fragment {
+    // recall to enable cleartext in android mainfest.xml file
+    // android:usesCleartextTraffic="true"
     Button addNoteButton;
     EditText titleEditText;
     EditText descriptionEditText;
-    final String url = "http://10.0.2.2:5000/notes";
+    // use 10.0.2.2:portNumber when using emulator
+    final String url = "http://192.168.0.116:5000/notes";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
