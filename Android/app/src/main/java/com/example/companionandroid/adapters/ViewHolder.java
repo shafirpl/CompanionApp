@@ -7,18 +7,21 @@ import android.widget.TextView;
 import com.example.companionandroid.R;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
     TextView noteTitleTextView;
-    ConstraintLayout noteHolderConstraintLayout;
+    //ConstraintLayout noteHolderConstraintLayout;
     LinearLayout noteHolderLinearLayout;
+    CardView noteItemCardView;
     public ViewHolder(@NonNull View itemView) {
         super(itemView);
         noteTitleTextView = itemView.findViewById(R.id.noteTitleTextView);
-        noteHolderConstraintLayout = itemView.findViewById(R.id.noteHolderConstraintLayout);
+        //noteHolderConstraintLayout = itemView.findViewById(R.id.noteHolderConstraintLayout);
         noteHolderLinearLayout = itemView.findViewById(R.id.noteHolderLinearLayout);
+        noteItemCardView = itemView.findViewById(R.id.noteItemCardView);
 //        noteTitleTextView = itemView.findViewById(R)
     }
 }

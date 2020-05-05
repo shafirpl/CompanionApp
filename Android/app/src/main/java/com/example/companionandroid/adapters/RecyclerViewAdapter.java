@@ -41,7 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
         Log.i("Bind Size",Integer.toString(noteTitle.size()));
         holder.noteTitleTextView.setText(noteTitle.get(position));
 
-        holder.noteHolderConstraintLayout.setOnClickListener(new View.OnClickListener() {
+        holder.noteItemCardView .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context,"Clicked",Toast.LENGTH_SHORT).show();
