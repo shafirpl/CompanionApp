@@ -1,4 +1,6 @@
 Youtube video link that demoes the app: https://youtu.be/3ghjt1lS7r0
+Screenshots
+https://imgur.com/a/L6gdYI5
 
 The app uses Bank of Canada's Valet Api to get real time USD to CAD rate, whcih is slightly lower than CIBC (the bank I use) rates. But I decided not to calibrate the data and use the rates received from valet api when converting the currencies as the conversion is meant to give an estimate.
 
