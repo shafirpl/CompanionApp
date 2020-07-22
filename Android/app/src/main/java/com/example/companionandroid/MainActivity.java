@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.companionandroid.fragments.CustomFragment;
 import com.example.companionandroid.fragments.DashboardFragment;
 import com.example.companionandroid.fragments.HomeFragment;
+import com.example.companionandroid.fragments.MiscellaneousFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.navigation_custom:
-                    thisFragment = new CustomFragment();
+                    thisFragment = new MiscellaneousFragment();
                     break;
             }
 
