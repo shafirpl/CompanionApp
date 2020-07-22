@@ -76,6 +76,7 @@ public class MilesToKm extends Fragment {
                     * there is some text. To fix that issue, this part runs if the editText is empty so we just
                     * set km. To see the effect, comment out this part and see what happens when we erases everything on
                     * the text view
+                    * It will throw an error and crashes the app if we don't have this part and the check
                      */
                     kmTextView.setText("Km");
                 }

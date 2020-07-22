@@ -161,14 +161,14 @@
                     android:layout_gravity="center_horizontal"
                     android:contentDescription="Car"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/ic_attach_money_black_24dp" />
+                    app:srcCompat="@drawable/ic_baseline_whatshot_24" />
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Cad To Bdt"
+                    android:text="Temp Conversion"
                     android:textAlignment="center"
                     android:textSize="14sp"
                     android:textStyle="bold" />

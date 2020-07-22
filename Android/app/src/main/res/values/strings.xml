@@ -2,7 +2,7 @@
     <string name="app_name">Companion Android</string>
     <string name="title_home">Notes</string>
     <string name="title_dashboard">Converter</string>
-    <string name="title_extra">Automation</string>
+    <string name="title_extra">Miscellaneous</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

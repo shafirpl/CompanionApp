@@ -54,7 +54,7 @@ public class DashboardFragment extends Fragment {
                     * https://www.youtube.com/watch?v=ONR94DlQFcA&t=9s
                     * Watch from 9 minutes mark
                      */
-                    Fragment thisFragment = new FragmentNotFound();
+                    Fragment thisFragment = new TempConversion();
                     if (cardView.getId() == R.id.miles_km){
                         thisFragment = new MilesToKm();
                     }
