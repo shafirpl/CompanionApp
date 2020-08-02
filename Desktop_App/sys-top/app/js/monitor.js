@@ -10,7 +10,7 @@ const notifier = require("node-notifier");
 const si = require("systeminformation");
 
 // initalizing socket io connection with server
-const socket = io('http://localhost:5500')
+// const socket = io('http://localhost:5500')
 
 let cpuOverload;
 let alertFreq;
@@ -24,26 +24,52 @@ let compName;
 let cpuModel;
 let totalMem;
 let uptime;
+let ipAddress;
 
-const sendData = () => {
-  /* 
-  * stackoverflow.com/questions/10600496/sending-messages-client-server-client-on-socket-io-on-node-js/10600926
-  * this explains how we send and recieve data back and forth from the server
-  */
-  socket.emit('data', {
-    compName,
-    totalMem,
-    cpuUsage,
-    cpuFree,
-    cpuModel,
-    memUsage,
-    memFree,
-    uptime,
+
+// const sendData = () => {
+//   /* 
+//   * stackoverflow.com/questions/10600496/sending-messages-client-server-client-on-socket-io-on-node-js/10600926
+//   * this explains how we send and recieve data back and forth from the server
+//   */
+//   socket.emit('data', {
+//     compName,
+//     totalMem,
+//     cpuUsage,
+//     cpuFree,
+//     cpuModel,
+//     memUsage,
+//     memFree,
+//     uptime,
+//   });
+//   console.log("data emitted")
+// } 
+
+const sendDataToProcess = () => {
+  ipcRenderer.send("monitor-data", {
+        compName,
+        totalMem,
+        cpuUsage,
+        cpuFree,
+        cpuModel,
+        memUsage,
+        memFree,
+        uptime,
   });
-  console.log("data emitted")
-} 
+}
 
-let setCpuModel = async () => {
+const setIpAddress = async () => {
+  try {
+    const data  = await si.networkInterfaces();
+    console.log(data);
+    document.getElementById("ip-address").innerText = data[1].ip4;
+
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+const setCpuModel = async () => {
   try {
     const data = await si.cpu();
     physicalCpuCount = data.physicalCores;
@@ -89,6 +115,7 @@ const runNotify = (freq) => {
 };
 
 setCpuModel();
+setIpAddress();
 
 /*
  * for other info, we need to update it at a set interval, so we need to run it every 2 second
@@ -147,7 +174,8 @@ setInterval(() => {
   uptime = convertSecondsToDHMS(os.uptime());
   document.getElementById("sys-uptime").innerText = uptime;
 
-  sendData();
+  // sendData();
+  sendDataToProcess();
 }, 2000);
 
 //computer name

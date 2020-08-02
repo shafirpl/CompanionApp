@@ -2,21 +2,21 @@ const express = require("express");
 const connectDB = require("./config/db");
 const path = require("path");
 const notesRoute = require("./routes/notesRoute");
-var http = require("http");
+// var http = require("http");
 
 /*
 * for socket io I watched brad's tutorial
 * https://www.youtube.com/watch?v=jD7FnbI76Hg
 */
 
-const socketIo = require('socket.io');
+// const socketIo = require('socket.io');
 
 const app = express();
 
 // we need this for socket.io to work
-const server = http.createServer(app)
+// const server = http.createServer(app)
 
-const io = socketIo(server);
+// const io = socketIo(server);
 
 // Connect Database
 connectDB();

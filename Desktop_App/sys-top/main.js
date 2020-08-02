@@ -1,16 +1,30 @@
+/*
+* we will use the app as the server, and the android/ios mobile devices
+* as clients
+* now we need to run our nodejs file from inside our app in order to
+* use that as a server
+*/
+
 const { app, BrowserWindow, Menu, ipcMain, Tray } = require("electron");
 const log = require('electron-log')
 const Store = require('./Store')
 const path = require('path')
 const MainWindow = require('./MainWindow.js')
+const axios = require("axios");
+// running our nodejs server
+require("./server");
+
 // Set env
 process.env.NODE_ENV = 'development'
 // process.env.NODE_ENV = "production";
+
+
 
 const isDev = process.env.NODE_ENV !== 'production' ? true : false
 const isMac = process.platform === 'darwin' ? true : false
 
 let mainWindow
+let socketWindow
 let tray
 
 
@@ -52,6 +66,14 @@ const store = new Store({
 
   function createMainWindow() {
   mainWindow = new MainWindow("./app/index.html", isDev);
+  socketWindow = new BrowserWindow({
+    show: false,
+    webPreferences: { nodeIntegration: true },
+  });
+
+  // socketWindow.loadFile('./server.js')
+  // run our nodejs app
+  // mainWindow.loadURL(`http:localhost:4200`)
 
   // if (isDev) {
   //   // open up the dev tools if we are in development mode
@@ -172,6 +194,16 @@ ipcMain.on('settings:set', (e, value) => {
    // the values of setting
    mainWindow.webContents.send("settings:get", store.get("settings"));
 })
+
+ipcMain.on("monitor-data", async (e,value) => {
+  const url = `http://localhost:4200/socket`
+  try {
+    const res = await axios.post(url,value);
+    // console.log(res)
+  } catch (error) {
+    console.log(error)
+  }
+});
 
 app.on('window-all-closed', () => {
   if (!isMac) {

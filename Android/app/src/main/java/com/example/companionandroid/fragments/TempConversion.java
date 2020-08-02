@@ -55,13 +55,14 @@ public class TempConversion extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         this.tempEditText = (EditText) view.findViewById(R.id.tempEditText);
         this.tempTextView = (TextView) view.findViewById(R.id.tempTextView);
+
+
+        /* Spinner code */
         List<String> tempList = new ArrayList<String>();
         final Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
         // celsius
         tempList.add(Celsius);
         // fahrenhite
-
-        /* Spinner code */
         tempList.add(Fahrenheit);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_item, tempList);
