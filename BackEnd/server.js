@@ -2,6 +2,7 @@ const express = require("express");
 const connectDB = require("./config/db");
 const path = require("path");
 const notesRoute = require("./routes/notesRoute");
+const maintenanceRoute = require("./routes/carMaintenance");
 // var http = require("http");
 
 /*
@@ -35,7 +36,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/notes",notesRoute);
-
+app.use("/maintenance", maintenanceRoute);
 // run when a client connects
 
 // similar to electron, whenever an event with the name 'connection' is emitted, we start listening to the server
@@ -58,6 +59,6 @@ const PORT = process.env.PORT || 5500;
 // do stuff with the data received from the socket
 
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });

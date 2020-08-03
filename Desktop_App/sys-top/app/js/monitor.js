@@ -12,6 +12,12 @@ const si = require("systeminformation");
 // initalizing socket io connection with server
 // const socket = io('http://localhost:5500')
 
+/*
+* Mac and windows had different stuff, for example in mac we had to divide by 1024 to get
+* the memory in gb, but in windows we don't have to. Similarly in mac the second item in ip address
+* array provides us with the ip address, whereas in windows its the first item
+*/
+
 let cpuOverload;
 let alertFreq;
 let physicalCpuCount;
@@ -24,11 +30,10 @@ let compName;
 let cpuModel;
 let totalMem;
 let uptime;
-let ipAddress;
 
 
 // const sendData = () => {
-//   /* 
+//   /*
 //   * stackoverflow.com/questions/10600496/sending-messages-client-server-client-on-socket-io-on-node-js/10600926
 //   * this explains how we send and recieve data back and forth from the server
 //   */
@@ -43,31 +48,36 @@ let ipAddress;
 //     uptime,
 //   });
 //   console.log("data emitted")
-// } 
+// }
 
 const sendDataToProcess = () => {
   ipcRenderer.send("monitor-data", {
-        compName,
-        totalMem,
-        cpuUsage,
-        cpuFree,
-        cpuModel,
-        memUsage,
-        memFree,
-        uptime,
+    compName,
+    totalMem,
+    cpuUsage,
+    cpuFree,
+    cpuModel,
+    memUsage,
+    memFree,
+    uptime,
   });
-}
+};
 
 const setIpAddress = async () => {
   try {
-    const data  = await si.networkInterfaces();
-    console.log(data);
-    document.getElementById("ip-address").innerText = data[1].ip4;
-
+    const data = await si.networkInterfaces();
+    // åconsole.log(data);
+    if (os.type() === "Darwin"){
+      document.getElementById("ip-address").innerText = data[1].ip4;
+    }
+    else{
+      document.getElementById("ip-address").innerText = data[0].ip4;
+    }
+    
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
+};
 
 const setCpuModel = async () => {
   try {
@@ -123,11 +133,12 @@ setIpAddress();
  */
 setInterval(() => {
   // toFixed method: https://www.w3schools.com/JSREF/jsref_tofixed.asp
-  //  si.mem().then((data) => 
+  //  si.mem().then((data) =>
   //  {console.log(data.free/(1000*1000*100))});
 
-    // mem usage
-    mem.info().then((info) => {
+  // mem usage
+  mem.info().then((info) => {
+    if (os.type() === "Darwin") {
       memUsage = `${(100 - info.freeMemPercentage).toFixed(2)}% | ${(
         info.usedMemMb / 1024
       ).toFixed(2)}GB`;
@@ -135,11 +146,32 @@ setInterval(() => {
         info.freeMemMb / 1000
       ).toFixed(2)}GB`;
 
-      document.getElementById("mem-usage").innerText = `${
-        (100 - info.freeMemPercentage).toFixed(2)
-      }% | ${(info.usedMemMb/1024).toFixed(2)}GB`;
-      document.getElementById('mem-free').innerText = `${(info.freeMemPercentage).toFixed(2)}% | ${(info.freeMemMb/1000).toFixed(2)}GB`
-    });
+      document.getElementById("mem-usage").innerText = `${(
+        100 - info.freeMemPercentage
+      ).toFixed(2)}% | ${(info.usedMemMb / 1024).toFixed(2)}GB`;
+      document.getElementById(
+        "mem-free"
+      ).innerText = `${info.freeMemPercentage.toFixed(2)}% | ${(
+        info.freeMemMb / 1000
+      ).toFixed(2)}GB`;
+    } else {
+      memUsage = `${(100 - info.freeMemPercentage).toFixed(
+        2
+      )}% | ${info.usedMemMb.toFixed(2)}GB`;
+      memFree = `${info.freeMemPercentage.toFixed(
+        2
+      )}% | ${info.freeMemMb.toFixed(2)}GB`;
+
+      document.getElementById("mem-usage").innerText = `${(
+        100 - info.freeMemPercentage
+      ).toFixed(2)}% | ${info.usedMemMb.toFixed(2)}GB`;
+      document.getElementById(
+        "mem-free"
+      ).innerText = `${info.freeMemPercentage.toFixed(
+        2
+      )}% | ${info.freeMemMb.toFixed(2)}GB`;
+    }
+  });
 
   // cpu usage
   cpu.usage().then((info) => {
@@ -185,12 +217,18 @@ compName = os.hostname();
 // os
 document.getElementById("os").innerText = `${os.type()} ${os.arch()}`;
 
+
 // total memory
 // it returns a promise for which we need to extract the info
 mem.info().then((info) => {
-  totalMem = info.totalMemMb / 1024
-  totalMem.toFixed(2)
+  totalMem = info.totalMemMb / 1024;
+  totalMem.toFixed(2);
   document.getElementById("mem-total").innerText = `${totalMem}GB`;
+  if (os.type() !== "Darwin") {
+    totalMem = info.totalMemMb;
+    totalMem.toFixed(2);
+    document.getElementById("mem-total").innerText = `${totalMem}GB`;
+  }
 });
 
 // show days, minutes, seconds

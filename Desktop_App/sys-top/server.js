@@ -1,9 +1,9 @@
 const express = require("express");
 
-const path = require("path");
+
 
 let http = require("http");
-let bodyParser = require("body-parser");
+
 
 
 let compName, totalMem, cpuUsage, cpuFree, cpuModel,memUsage, memFree, uptime;
@@ -57,12 +57,38 @@ app.post("/socket",(req,res) => {
 * emits an event with name "data" with the required info
 * in order to catch that data, we need to have the socket variable inside the io.on function
 */
-io.on('connection', socket => {
-  console.log('New WS connection')
-    socket.on("data", (msg) => {
-      console.log(msg);
-    });
-});
+// io.on('connection', socket => {
+//   console.log('New WS connection')
+//     // socket.on("data", (msg) => {
+//     //   console.log(msg);
+//     // });
+//     // start sending data to client
+//     setInterval(() => {
+//       socket.emit("data", {
+//         compName,
+//         totalMem,
+//         cpuUsage,
+//         cpuFree,
+//         cpuModel,
+//         memUsage,
+//         memFree,
+//         uptime,
+//       });
+//     },2000)
+// });
+
+app.get("/socket", (req,res) => {
+  res.send({
+    compName,
+    totalMem,
+    cpuUsage,
+    cpuFree,
+    cpuModel,
+    memUsage,
+    memFree,
+    uptime,
+  });
+})
 
 const PORT = process.env.PORT || 4200;
 

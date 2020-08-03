@@ -132,6 +132,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        // this sets out the reuqest, without this we won't make the request
         requestQueue.add(jsonArrayRequest);
         //Toast.makeText(getContext(),noteId.toString(),Toast.LENGTH_SHORT).show();
 

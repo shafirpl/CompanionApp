@@ -58,6 +58,9 @@ public class MiscellaneousFragment extends Fragment {
                      * Watch from 9 minutes mark
                      */
                     Fragment fragment = new RiceToWater();
+                    if (cardView.getId() == R.id.pc_temp_monitor){
+                        fragment = new pcTempMonitor();
+                    }
                     fragmentTransaction.replace(R.id.fragment_layout,fragment);
                     fragmentTransaction.commit();
                 }
