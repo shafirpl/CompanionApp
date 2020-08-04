@@ -39,7 +39,9 @@ public class NoteItemDescription extends Fragment {
     /*
     * to grab data
     * https://stackoverflow.com/questions/16036572/how-to-pass-values-between-fragments
-     */
+    * We can use the getArgument method both in onCreateView and onViewCreated. It doesn't matter where we use
+    * it. In other words, we can grab the arguments both in onCreateView and onViewCreated
+    */
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_note_item_description,container,false);
         title = getArguments().getString("title");

@@ -3,13 +3,12 @@ package com.example.companionandroid.adapters;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.example.companionandroid.R;
-
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
+// we need to import this manually
+import com.example.companionandroid.R;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
     TextView noteTitleTextView;

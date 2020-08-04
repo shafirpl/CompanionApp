@@ -65,7 +65,7 @@ public class DashboardFragment extends Fragment {
                         thisFragment = new UsdToCad();
                     }
                     fragmentTransaction.replace(R.id.fragment_layout,thisFragment);
-                    fragmentTransaction.commit();
+                    fragmentTransaction.addToBackStack(null).commit();
 
                 }
             });

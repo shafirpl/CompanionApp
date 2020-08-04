@@ -5,9 +5,9 @@ const Note = require("../models/notes");
 router.post('/', async(req,res) => {
     try {
         const newNote = new Note({
-            noteId: req.body.noteId,
-            title: req.body.title,
-            description: req.body.description
+          noteId: req.body.noteId,
+          title: req.body.title,
+          description: req.body.description,
         });
         const note = await newNote.save();
         res.status(200).json(note);

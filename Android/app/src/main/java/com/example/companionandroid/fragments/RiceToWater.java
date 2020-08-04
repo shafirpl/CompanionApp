@@ -65,12 +65,12 @@ public class RiceToWater extends Fragment {
     }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        List<String> riceList = new ArrayList<String>();
         this.editTextTextRiceCups = (EditText) view.findViewById(R.id.editTextTextRiceCups);
         this.riceWaterCupsTextView = (TextView) view.findViewById(R.id.riceWaterCupsTextView);
 
         // spinner code
         final Spinner spinner = (Spinner) view.findViewById(R.id.riceSelector);
+        List<String> riceList = new ArrayList<String>();
         riceList.add(basmati);
         riceList.add(jasemine);
         riceList.add(chinigura);

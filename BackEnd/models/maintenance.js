@@ -2,6 +2,16 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const MaintenanceSchema = new Schema({
+  title: {
+    type: String,
+  },
+  timestamp: {
+    type: Date,
+    default: Date.now
+  },
+  odometer: {
+    type: Number,
+  },
   date: {
     type: String,
     required: true,

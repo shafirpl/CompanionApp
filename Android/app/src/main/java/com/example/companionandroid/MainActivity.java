@@ -3,7 +3,9 @@ package com.example.companionandroid;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     public static int something;
     //public static final String url = "http://10.0.2.2:5000/notes";
     public static final String url = "http://138.68.61.175:5500/notes";
+    Toolbar toolbar;
 
 
 
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         FrameLayout frameLayout = (FrameLayout) findViewById(R.id.fragment_layout);
 
         // initializing fragment
@@ -44,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         // whatever fragment is selected
         Fragment fragment = new HomeFragment();
         fragmentTransaction.add(R.id.fragment_layout, fragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.addToBackStack(null).commit();
 
         // start listening to bottom navigation bar
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigation);

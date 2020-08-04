@@ -15,9 +15,6 @@ import android.view.ViewGroup;
 
 import com.example.companionandroid.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MiscellaneousFragment extends Fragment {
     private GridLayout gridLayout;
     @Nullable
@@ -61,8 +58,12 @@ public class MiscellaneousFragment extends Fragment {
                     if (cardView.getId() == R.id.pc_temp_monitor){
                         fragment = new pcTempMonitor();
                     }
+                    else if(cardView.getId() == R.id.car_maintenance_grid){
+                        // fragment = new maintenance_item_detail();
+                        fragment = new CarMaintenance();
+                    }
                     fragmentTransaction.replace(R.id.fragment_layout,fragment);
-                    fragmentTransaction.commit();
+                    fragmentTransaction.addToBackStack(null).commit();
                 }
             });
         }
