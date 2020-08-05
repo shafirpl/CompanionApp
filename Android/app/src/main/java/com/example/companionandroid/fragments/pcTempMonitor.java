@@ -28,6 +28,9 @@ import com.example.companionandroid.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/*
+* this will be called from PcTempRecyclerAdapter
+ */
 
 public class pcTempMonitor extends Fragment {
     private Handler handler;
@@ -43,6 +46,13 @@ public class pcTempMonitor extends Fragment {
     private TextView memTotalTextView;
     private String partialUrl;
     private String pcNickName;
+
+    private TextView compNameTextView;
+    private TextView givenNameTextView;
+    private TextView ipAddressTextView;
+
+
+
     final String port = ":4200/socket";
 
     @Nullable
@@ -53,9 +63,10 @@ public class pcTempMonitor extends Fragment {
     }
 
     @Override
+    //arguments coming from PcTempRecyclerAdapter
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         this.partialUrl = getArguments().getString("pcIpAddress");
-        this.pcNickName = getArguments().getString("pcIpAddress");
+        this.pcNickName = getArguments().getString("pcName");
         this.handler = new Handler();
         this.cpuUsageBar = (ProgressBar) view.findViewById(R.id.cpuUsageBar);
         this.cpuUsageTextView = (TextView) view.findViewById(R.id.cpuUsageTextView);
@@ -66,6 +77,10 @@ public class pcTempMonitor extends Fragment {
         this.memUsageTextView = (TextView) view.findViewById(R.id.memUsageTextView);
         this.memUsageBar = (ProgressBar) view.findViewById(R.id.memUsageBar);
         this.memTotalTextView = (TextView) view.findViewById(R.id.memTotalTextView);
+
+        this.compNameTextView = (TextView) view.findViewById(R.id.compNameTextView);
+        this.givenNameTextView = (TextView) view.findViewById(R.id.givenNameTextView);
+        this.ipAddressTextView = (TextView) view.findViewById(R.id.ipAddressTextView);
         /*
         * https://www.youtube.com/watch?v=3pgGVBmSVq0
         * This video explains how we can keep calling the backend to get continious data
@@ -133,6 +148,11 @@ public class pcTempMonitor extends Fragment {
                         memUsageTextView.setText(response.getString("memUsage").toString());
                         memFreeTextView.setText(response.getString("memFree").toString());
                         memTotalTextView.setText(response.getString("totalMem")+ " GB");
+
+                        // info
+                        compNameTextView.setText(response.getString("compName"));
+                        givenNameTextView.setText(pcNickName);
+                        ipAddressTextView.setText(partialUrl);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

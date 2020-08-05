@@ -18,6 +18,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+// this is being called from pcTempMain
 public class PcTempRecyclerAdapter extends RecyclerView.Adapter<IpAddressViewHolder> {
     private ArrayList<String> pcName;
     private ArrayList<String> ipAddress;

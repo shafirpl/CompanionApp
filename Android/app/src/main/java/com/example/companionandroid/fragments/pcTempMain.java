@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,6 +26,7 @@ import com.example.companionandroid.MainActivity;
 import com.example.companionandroid.R;
 import com.example.companionandroid.adapters.PcTempRecyclerAdapter;
 import com.example.companionandroid.adapters.RecyclerViewAdapter;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,6 +39,7 @@ public class pcTempMain extends Fragment {
     private ArrayList<String> pcName;
     private ArrayList<String> ipAddress;
     private ArrayList<String> id;
+    private FloatingActionButton addIpAddressButton;
     final String url = "http://10.0.2.2:5500/ip";
 //    final String url = "http://192.168.0.116:5000/notes";
 
@@ -54,6 +57,16 @@ public class pcTempMain extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         this.onViewCreatedView = view;
+        this.addIpAddressButton = (FloatingActionButton) view.findViewById(R.id.addIpAddressButton);
+        this.addIpAddressButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = new AddNewIpAddress();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_layout,fragment);
+                fragmentTransaction.addToBackStack(null).commit();
+            }
+        });
         this.fetchAddress();
     }
 
