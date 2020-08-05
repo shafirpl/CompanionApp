@@ -56,7 +56,7 @@ public class MiscellaneousFragment extends Fragment {
                      */
                     Fragment fragment = new RiceToWater();
                     if (cardView.getId() == R.id.pc_temp_monitor){
-                        fragment = new pcTempMonitor();
+                        fragment = new pcTempMain();
                     }
                     else if(cardView.getId() == R.id.car_maintenance_grid){
                         // fragment = new maintenance_item_detail();

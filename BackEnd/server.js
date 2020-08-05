@@ -3,6 +3,7 @@ const connectDB = require("./config/db");
 const path = require("path");
 const notesRoute = require("./routes/notesRoute");
 const maintenanceRoute = require("./routes/carMaintenance");
+const ipRoute = require("./routes/ipAddress");
 // var http = require("http");
 
 /*
@@ -37,6 +38,7 @@ app.get("/", (req, res) => {
 
 app.use("/notes",notesRoute);
 app.use("/maintenance", maintenanceRoute);
+app.use("/ip",ipRoute);
 // run when a client connects
 
 // similar to electron, whenever an event with the name 'connection' is emitted, we start listening to the server
