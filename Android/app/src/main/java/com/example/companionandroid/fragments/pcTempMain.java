@@ -1,9 +1,11 @@
 package com.example.companionandroid.fragments;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -21,6 +23,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.companionandroid.MainActivity;
 import com.example.companionandroid.R;
@@ -109,6 +112,60 @@ public class pcTempMain extends Fragment {
         PcTempRecyclerAdapter adapter = new PcTempRecyclerAdapter(this.pcName,this.ipAddress,this.id,getContext());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        //new ItemTouchHelper(itemTouchHelperCallBack).attachToRecyclerView(recyclerView);
+        new ItemTouchHelper(itemTouchHelperCallBack).attachToRecyclerView(recyclerView);
+    }
+    ItemTouchHelper.SimpleCallback itemTouchHelperCallBack = new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT | ItemTouchHelper.LEFT) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull final RecyclerView.ViewHolder viewHolder, int direction) {
+            new AlertDialog.Builder(getContext())
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("Are You Sure!")
+                    .setMessage("PC will be permanently deleted")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        // this function will run if the user clicks the yes or positive button
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            deleteRecord(viewHolder.getAdapterPosition());
+
+                        }
+                    })
+                    // null means we won't run any code if the user clicks the no/negative button
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            fetchAddress();
+                        }
+                    })
+                    .show();
+        }
+    };
+
+    private void deleteRecord(int position){
+        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+        String urlBuilder = this.url + "/" + id.get(position);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, urlBuilder, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    if(response.getInt("done") == 1){
+                        Toast.makeText(getContext(),"Record Deleted",Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        requestQueue.add(jsonObjectRequest);
+
     }
 }

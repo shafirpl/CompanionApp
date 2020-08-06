@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 import com.example.companionandroid.MainActivity;
 import com.example.companionandroid.R;
+import com.example.companionandroid.fragments.EditIpAddress;
+import com.example.companionandroid.fragments.FragmentNotFound;
 import com.example.companionandroid.fragments.pcTempMonitor;
 
 import java.util.ArrayList;
@@ -45,6 +47,29 @@ public class PcTempRecyclerAdapter extends RecyclerView.Adapter<IpAddressViewHol
         final String ipAddressString = this.ipAddress.get(position);
         holder.pcIpAddressTextView.setText(ipAddressString);
         holder.pcNameTextView.setText(pcNameString);
+        final String ipId = this.id.get(position);
+        holder.ipAddressCardView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                // https://stackoverflow.com/questions/5428077/android-why-does-long-click-also-trigger-a-normal-click
+                // explains what the return value should be
+                Bundle args = new Bundle();
+                args.putString("pcName",pcNameString);
+                args.putString("pcIpAddress",ipAddressString);
+                args.putString("id",ipId);
+
+                Fragment fragment = new EditIpAddress();
+                fragment.setArguments(args);
+
+                // pcTempMonitor.setArguments(args);
+
+                FragmentManager fragmentManager = ((MainActivity) context).getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_layout,fragment).addToBackStack(null).commit();
+
+                return true;
+            }
+        });
 
         holder.ipAddressCardView.setOnClickListener(new View.OnClickListener() {
             @Override
