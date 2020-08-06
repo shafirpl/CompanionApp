@@ -40,8 +40,8 @@ public class pcTempMain extends Fragment {
     private ArrayList<String> ipAddress;
     private ArrayList<String> id;
     private FloatingActionButton addIpAddressButton;
-    final String url = "http://10.0.2.2:5500/ip";
-//    final String url = "http://192.168.0.116:5000/notes";
+    //final String url = "http://10.0.2.2:5500/ip";
+    final String url = "http://138.68.61.175:5500/ip";
 
 
     @Nullable

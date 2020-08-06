@@ -11,8 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.companionandroid.R;
 
@@ -25,6 +30,8 @@ public class AddNewIpAddress extends Fragment {
     EditText newPcNameEditText;
     EditText newIpAddressEditText;
     Button addNewPcButton;
+    private final String url = "http://138.68.61.175:5500/ip";
+
 
     @Nullable
     @Override
@@ -45,13 +52,35 @@ public class AddNewIpAddress extends Fragment {
                 try {
                     RequestQueue requestQueue = Volley.newRequestQueue(getContext());
                     JSONObject jsonObject = new JSONObject();
-                    jsonObject.put("compName",newPcNameEditText.getText().toString());
+                    final String compName = newPcNameEditText.getText().toString();
+                    jsonObject.put("compName",compName);
                     jsonObject.put("ipAddress", newIpAddressEditText.getText().toString());
-                    
+
+                    JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, jsonObject, new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            try {
+                                if (response.getString("compName").equals(compName)){
+                                    Toast.makeText(getContext(),"PC Added",Toast.LENGTH_SHORT).show();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                Toast.makeText(getContext(),"Server Error",Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            error.printStackTrace();
+                        }
+                    });
+                    requestQueue.add(jsonObjectRequest);
 
                 } catch (JSONException e){
                     e.printStackTrace();
                 }
+
             }
         });
 

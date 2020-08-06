@@ -12,7 +12,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
-            android:windowSoftInputMode="adjustNothing"
+            android:windowSoftInputMode="adjustResize|stateHidden"
             android:screenOrientation="portrait">
 
             <intent-filter>

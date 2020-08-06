@@ -26,8 +26,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Maintenance_item_detail extends Fragment {
-    public static final String url = "http://10.0.2.2:5500/maintenance";
-    // public static final String url = "http://138.68.61.175:5500/maintenance";
+    // public static final String url = "http://10.0.2.2:5500/maintenance";
+    public static final String url = "http://138.68.61.175:5500/maintenance";
     EditText titleEditText;
     String title;
     EditText dateEditText;

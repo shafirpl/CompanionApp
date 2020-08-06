@@ -47,8 +47,8 @@ public class CarMaintenance extends Fragment {
     private ArrayList <String> shopName = new ArrayList<String>();
     private FloatingActionButton addMaintenanceButton;
     // use 10.0.2.2:portNumber when using emulator
-    final String url = "http://10.0.2.2:5500/maintenance";
-    // final String url = "http://192.168.0.116:5000/notes";
+    // final String url = "http://10.0.2.2:5500/maintenance";
+    final String url = "http://138.68.61.175:5500/maintenance";
     private View onViewCreatedView;
 
     @Nullable
