@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="icK-mu-Dfa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="UAF-2j-Fv7">
+                                <rect key="frame" x="36.333333333333343" y="277.33333333333337" width="341.33333333333326" height="341.33333333333337"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Companion App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjV-Ki-r2D">
+                                <rect key="frame" x="105.66666666666667" y="235.33333333333334" width="202.66666666666663" height="32.000000000000028"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made By Shafi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7Z-Xm-8eY">
+                                <rect key="frame" x="117.33333333333333" y="628.66666666666663" width="179.66666666666669" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bjV-Ki-r2D" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4Pd-vI-Anz"/>
+                            <constraint firstItem="icK-mu-Dfa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6ms-8c-O5q"/>
+                            <constraint firstItem="icK-mu-Dfa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7TL-1D-IWG"/>
+                            <constraint firstItem="UAF-2j-Fv7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Isf-1g-0OH"/>
+                            <constraint firstItem="UAF-2j-Fv7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="P2C-Kt-VJ0"/>
+                            <constraint firstItem="icK-mu-Dfa" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="Pcx-2I-fix"/>
+                            <constraint firstItem="m7Z-Xm-8eY" firstAttribute="top" secondItem="UAF-2j-Fv7" secondAttribute="bottom" constant="10" id="eqx-gm-wmi"/>
+                            <constraint firstItem="m7Z-Xm-8eY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fzN-4S-vvi"/>
+                            <constraint firstItem="UAF-2j-Fv7" firstAttribute="top" secondItem="bjV-Ki-r2D" secondAttribute="bottom" constant="10" id="tA0-rl-Plr"/>
+                            <constraint firstItem="icK-mu-Dfa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wnA-T0-vCx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862.31884057971024" y="357.58928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="logo" width="341.33334350585938" height="341.33334350585938"/>
+    </resources>
+</document>
