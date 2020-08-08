@@ -75,7 +75,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
                  */
                 FragmentManager fragmentManager = ((MainActivity) context).getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_layout,noteItemDescriptionFragment).commit();
+                fragmentTransaction.replace(R.id.fragment_layout,noteItemDescriptionFragment).addToBackStack(null).commit();
 
 
             }

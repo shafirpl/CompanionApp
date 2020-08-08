@@ -11,9 +11,10 @@ let compName, totalMem, cpuUsage, cpuFree, cpuModel,memUsage, memFree, uptime;
 /*
 * for socket io I watched brad's tutorial
 * https://www.youtube.com/watch?v=jD7FnbI76Hg
+* not using socket.io
 */
 
-const socketIo = require('socket.io');
+// const socketIo = require('socket.io');
 
 const app = express();
 
@@ -22,9 +23,9 @@ const app = express();
 
 
 // we need this for socket.io to work
-const server = http.createServer(app)
+// const server = http.createServer(app)
 
-const io = socketIo(server);
+// const io = socketIo(server);
 
 
 
@@ -94,6 +95,6 @@ const PORT = process.env.PORT || 4200;
 
 // do stuff with the data received from the socket
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });

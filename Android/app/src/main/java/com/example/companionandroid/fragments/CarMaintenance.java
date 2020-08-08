@@ -176,6 +176,7 @@ public class CarMaintenance extends Fragment {
                 try {
                     if(response.getInt("done") == 1){
                         Toast.makeText(getContext(),"Record Deleted",Toast.LENGTH_SHORT).show();
+                        fetchRecords();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

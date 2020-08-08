@@ -2,63 +2,64 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/editNoteButton"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/titleShowEditText"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="Title"
-            android:inputType="textPersonName" />
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
 
-        <!--        To make the text multiline-->
-        <!--        https://stackoverflow.com/questions/4233626/allow-multi-line-in-edittext-view-in-android/4233887-->
-        <!--        Basically set inputType to multiline. I did it visually-->
-        <!--        Also to make the cursor at top left, we do gravity top left-->
+            <EditText
+                android:id="@+id/titleShowEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Title"
+                android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/descriptionShowEditText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:gravity="top|left"
-            android:hint="Description"
-            android:inputType="textMultiLine|textPersonName" />
+            <!--        To make the text multiline-->
+            <!--        https://stackoverflow.com/questions/4233626/allow-multi-line-in-edittext-view-in-android/4233887-->
+            <!--        Basically set inputType to multiline. I did it visually-->
+            <!--        Also to make the cursor at top left, we do gravity top left-->
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/descriptionShowEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="Description"
+                android:inputType="textMultiLine|textPersonName" />
 
-    <Button
-        android:id="@+id/editNoteButton"
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="250dp"
-        android:paddingLeft="32dp"
-        android:paddingTop="16dp"
-        android:paddingRight="32dp"
-        android:paddingBottom="16dp"
-        android:text="Confirm Edit"
-        android:textSize="18sp"
-        app:icon="@drawable/ic_add_black_24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+            <Button
+                android:id="@+id/editNoteButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingTop="16dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp"
+                android:text="Confirm Edit"
+                android:textSize="18sp"
+                app:icon="@drawable/ic_add_black_24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
