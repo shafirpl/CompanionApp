@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class NotesMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+        let urlString = "http://138.68.61.175:5500/notes"
+    
+    // for the realod button, I did it the same way
+    // drag and drop method just like any other button
+    @IBOutlet weak var reloadButton: UIBarButtonItem!
+    
     @IBOutlet weak var notesTableView: UITableView!
     var notes = [noteItemStruct]()
     /*
@@ -73,6 +79,41 @@ class NotesMainViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     /*
+     * swipe to delete stuff
+     * I used this article to read through them
+     * https://www.hackingwithswift.com/example-code/uikit/how-to-swipe-to-delete-uitableviewcells
+     * it is ridiculously easy, I didn't have to add anything visually. Just these lines of code
+     * and suddenly I have a delete button. Just wow. In android I had to do a lot of weird stuff
+     */
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete){
+            /*
+             * Now we need to do the last 2 lines in order
+             * we don't need to reload the table data, as we will be deleting the data from our
+             * array manually in order for it to work
+             * first we need to make the backend call, as after deleting the stuff manually the
+             * record at indexPath wont' exist, so we need to grab the record before deleting it
+             * then we need to delete the entry from our array manually
+             * after only then we can delete the row and do the animation
+             */
+            deleteNote(noteId: self.notes[indexPath.row].noteId)
+            notes.remove(at: indexPath.row)
+            notesTableView.deleteRows(at: [indexPath], with: .fade)
+            
+            
+            
+        }
+    }
+    
+    func deleteNote(noteId:String){
+        // print(noteId)
+        let url = urlString + "/" + noteId
+        AF.request(url,method: .delete).responseJSON{
+            response in print(response)
+        }
+    }
+    
+    /*
      * basically with the closure completed function, what will happen is that
      * we will pass a function when we are calling this function as a parameter, and
      * it will execute this function after the download is done
@@ -80,7 +121,7 @@ class NotesMainViewController: UIViewController, UITableViewDelegate, UITableVie
      * the download is complete, it will print "something" on the console
      */
     func downloadJSON(completed: @escaping () -> ()){
-        let url = URL(string: "http://138.68.61.175:5500/notes")
+        let url = URL(string: urlString)
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error == nil{
                 do{
@@ -97,15 +138,10 @@ class NotesMainViewController: UIViewController, UITableViewDelegate, UITableVie
         }.resume()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func reloadButtonAction(_ sender: Any) {
+        downloadJSON {
+            self.notesTableView.reloadData()
+        }
     }
-    */
-
+    
 }

@@ -36,10 +36,16 @@
                                 <segue destination="Uw6-Z0-UJp" kind="show" id="auI-OY-nOZ"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Reload" id="PgK-C7-uQ7">
+                            <connections>
+                                <action selector="reloadButtonAction:" destination="eTZ-kO-KF9" id="30V-PH-kJI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="notesTableView" destination="sfh-rq-okv" id="jt4-PF-Qas"/>
+                        <outlet property="reloadButton" destination="PgK-C7-uQ7" id="vDU-wM-mi6"/>
                         <segue destination="1bx-1K-lhd" kind="show" identifier="showDetails" id="dep-Ja-DKZ"/>
                     </connections>
                 </viewController>
