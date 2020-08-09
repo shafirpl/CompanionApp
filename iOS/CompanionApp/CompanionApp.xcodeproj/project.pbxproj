@@ -12,6 +12,10 @@
 		E108D8470E072EABE8A3FC20 /* Pods_CompanionAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556E1E60DD15D4244D75DB62 /* Pods_CompanionAppTests.framework */; };
 		F01972D224DF8D0100C3DBBA /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01972D124DF8D0100C3DBBA /* Notes.storyboard */; };
 		F01972D724DF971100C3DBBA /* NoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01972D624DF971100C3DBBA /* NoteDetailsViewController.swift */; };
+		F01972DD24DF9AFC00C3DBBA /* NotesMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01972DC24DF9AFC00C3DBBA /* NotesMainViewController.swift */; };
+		F01972DF24DF9BF500C3DBBA /* NoteItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01972DE24DF9BF500C3DBBA /* NoteItemStruct.swift */; };
+		F01972E924DFCB5A00C3DBBA /* AddDoneButtonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01972E824DFCB5A00C3DBBA /* AddDoneButtonTextField.swift */; };
+		F01972EB24DFCBA600C3DBBA /* AddDoneButtonTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01972EA24DFCBA600C3DBBA /* AddDoneButtonTextView.swift */; };
 		F0A108E624DEBF4900A1654A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A108E524DEBF4900A1654A /* AppDelegate.swift */; };
 		F0A108E824DEBF4900A1654A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A108E724DEBF4900A1654A /* SceneDelegate.swift */; };
 		F0A108EA24DEBF4900A1654A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A108E924DEBF4900A1654A /* FirstViewController.swift */; };
@@ -50,8 +54,12 @@
 		C221C1D91F35AFFEBFD77BCF /* Pods-CompanionAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanionAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CompanionAppTests/Pods-CompanionAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E017F84DD9B6168B4748E8A6 /* Pods-CompanionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanionApp.debug.xcconfig"; path = "Target Support Files/Pods-CompanionApp/Pods-CompanionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EF5069897CE62694FEC19951 /* Pods-CompanionApp-CompanionAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanionApp-CompanionAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-CompanionApp-CompanionAppUITests/Pods-CompanionApp-CompanionAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F01972D124DF8D0100C3DBBA /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = SOURCE_ROOT; };
+		F01972D124DF8D0100C3DBBA /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Notes.storyboard; path = CompanionApp/StoryBoards/Notes/Notes.storyboard; sourceTree = SOURCE_ROOT; };
 		F01972D624DF971100C3DBBA /* NoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewController.swift; sourceTree = "<group>"; };
+		F01972DC24DF9AFC00C3DBBA /* NotesMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesMainViewController.swift; sourceTree = "<group>"; };
+		F01972DE24DF9BF500C3DBBA /* NoteItemStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItemStruct.swift; sourceTree = "<group>"; };
+		F01972E824DFCB5A00C3DBBA /* AddDoneButtonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDoneButtonTextField.swift; sourceTree = "<group>"; };
+		F01972EA24DFCBA600C3DBBA /* AddDoneButtonTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDoneButtonTextView.swift; sourceTree = "<group>"; };
 		F0A108E224DEBF4900A1654A /* CompanionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A108E524DEBF4900A1654A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0A108E724DEBF4900A1654A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +131,7 @@
 		F01972D024DF8C6100C3DBBA /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				F01972D124DF8D0100C3DBBA /* Notes.storyboard */,
+				F01972D924DF978B00C3DBBA /* Notes */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 		F01972D424DF968300C3DBBA /* SwiftFiles */ = {
 			isa = PBXGroup;
 			children = (
+				F01972E124DFC7A700C3DBBA /* AdditionalStuff */,
 				F01972D524DF96DF00C3DBBA /* Notes */,
 			);
 			path = SwiftFiles;
@@ -140,8 +149,27 @@
 			isa = PBXGroup;
 			children = (
 				F01972D624DF971100C3DBBA /* NoteDetailsViewController.swift */,
+				F01972DC24DF9AFC00C3DBBA /* NotesMainViewController.swift */,
+				F01972DE24DF9BF500C3DBBA /* NoteItemStruct.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		F01972D924DF978B00C3DBBA /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				F01972D124DF8D0100C3DBBA /* Notes.storyboard */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		F01972E124DFC7A700C3DBBA /* AdditionalStuff */ = {
+			isa = PBXGroup;
+			children = (
+				F01972E824DFCB5A00C3DBBA /* AddDoneButtonTextField.swift */,
+				F01972EA24DFCBA600C3DBBA /* AddDoneButtonTextView.swift */,
+			);
+			path = AdditionalStuff;
 			sourceTree = "<group>";
 		};
 		F0A108D924DEBF4900A1654A = {
@@ -444,8 +472,12 @@
 				F0A108EC24DEBF4900A1654A /* SecondViewController.swift in Sources */,
 				F0A108EA24DEBF4900A1654A /* FirstViewController.swift in Sources */,
 				F0A108E624DEBF4900A1654A /* AppDelegate.swift in Sources */,
+				F01972DF24DF9BF500C3DBBA /* NoteItemStruct.swift in Sources */,
 				F01972D724DF971100C3DBBA /* NoteDetailsViewController.swift in Sources */,
+				F01972E924DFCB5A00C3DBBA /* AddDoneButtonTextField.swift in Sources */,
 				F0A108E824DEBF4900A1654A /* SceneDelegate.swift in Sources */,
+				F01972DD24DF9AFC00C3DBBA /* NotesMainViewController.swift in Sources */,
+				F01972EB24DFCBA600C3DBBA /* AddDoneButtonTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
