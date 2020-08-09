@@ -9,7 +9,7 @@
 import Foundation
 
 struct noteItemStruct:Decodable {
-    let _id: String
+    let noteId: String
     let title: String
     let description: String
 }

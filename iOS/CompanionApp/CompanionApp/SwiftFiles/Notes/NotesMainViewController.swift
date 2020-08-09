@@ -12,6 +12,17 @@ class NotesMainViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var notesTableView: UITableView!
     var notes = [noteItemStruct]()
+    /*
+     * The problem with viewDidLoad is that it will only runs once, so our
+     * call to our backend will only happen once, we don't want that.
+     * We want to run the get request every time we come to this screen
+     * viewDidAppear fixes that, as it runs every time the screen is loaded
+     */
+    override func viewDidAppear(_ animated: Bool) {
+        downloadJSON {
+            self.notesTableView.reloadData()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
