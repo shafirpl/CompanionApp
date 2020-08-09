@@ -1,0 +1,6 @@
+framework module Pods_CompanionApp_CompanionAppUITests {
+  umbrella header "Pods-CompanionApp-CompanionAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
