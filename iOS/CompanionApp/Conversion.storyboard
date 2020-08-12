@@ -37,11 +37,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dL8-yU-bZu">
                                 <rect key="frame" x="20" y="309" width="374" height="278"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zg4-Cl-7bc">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zg4-Cl-7bc">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="139"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slV-zl-6Qu">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="139"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="131"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" title="Distance" image="car" catalog="system">
@@ -52,7 +52,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWy-rz-KiY">
-                                                <rect key="frame" x="187" y="0.0" width="187" height="139"/>
+                                                <rect key="frame" x="191" y="0.0" width="183" height="131"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" title="Weight" image="scale">
@@ -63,17 +63,31 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="8" right="0.0"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bIo-yM-7z7">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bIo-yM-7z7">
                                         <rect key="frame" x="0.0" y="139" width="374" height="139"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUP-7i-ekJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="139"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUP-7i-ekJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="139"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" title="Temp" image="thermometer" catalog="system">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="VEI-jb-oXz" kind="show" id="AVG-UQ-Ljj"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u4-Ra-zj4">
-                                                <rect key="frame" x="187" y="0.0" width="187" height="139"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u4-Ra-zj4">
+                                                <rect key="frame" x="191" y="0.0" width="183" height="139"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Currency" image="dollarsign.square" catalog="system">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="7g7-CQ-SCV" kind="show" id="KMv-fA-ham"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -82,23 +96,144 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dL8-yU-bZu" firstAttribute="trailing" secondItem="TQa-Vr-u5C" secondAttribute="trailingMargin" id="8Pk-Rs-H0h"/>
-                            <constraint firstItem="dL8-yU-bZu" firstAttribute="top" secondItem="QX2-1R-c9f" secondAttribute="top" constant="221" id="cDZ-hy-U1m"/>
-                            <constraint firstItem="dL8-yU-bZu" firstAttribute="centerY" secondItem="TQa-Vr-u5C" secondAttribute="centerY" id="hzJ-ia-I3A"/>
-                            <constraint firstItem="dL8-yU-bZu" firstAttribute="leading" secondItem="TQa-Vr-u5C" secondAttribute="leadingMargin" id="uLm-of-yhd"/>
+                            <constraint firstItem="dL8-yU-bZu" firstAttribute="trailing" secondItem="TQa-Vr-u5C" secondAttribute="trailingMargin" id="6wM-cQ-Erq"/>
+                            <constraint firstItem="dL8-yU-bZu" firstAttribute="top" secondItem="QX2-1R-c9f" secondAttribute="top" constant="221" id="c6h-qg-Pbp"/>
+                            <constraint firstItem="dL8-yU-bZu" firstAttribute="centerY" secondItem="TQa-Vr-u5C" secondAttribute="centerY" id="ptF-93-70o"/>
+                            <constraint firstItem="dL8-yU-bZu" firstAttribute="leading" secondItem="TQa-Vr-u5C" secondAttribute="leadingMargin" id="q7i-71-Czr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QX2-1R-c9f"/>
                     </view>
                     <navigationItem key="navigationItem" title="Conversion" id="6JC-4O-O7a"/>
                     <connections>
+                        <outlet property="currencyButton" destination="3u4-Ra-zj4" id="Wfl-6Y-Svc"/>
                         <outlet property="distanceButton" destination="slV-zl-6Qu" id="1FZ-wi-bWn"/>
+                        <outlet property="tempButton" destination="HUP-7i-ekJ" id="dvD-kj-wuO"/>
+                        <outlet property="weightButton" destination="NWy-rz-KiY" id="UFI-Tl-bsg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vey-Pw-RCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="430.43478260869568" y="450"/>
         </scene>
-        <!--Distance-->
+        <!--Currency Conversion-->
+        <scene sceneID="AKW-bP-3Hf">
+            <objects>
+                <viewController id="7g7-CQ-SCV" customClass="CurrencyViewController" customModule="CompanionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fyo-4A-IWf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kI-IP-COZ">
+                                <rect key="frame" x="20" y="425" width="374" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="valueInputted:" destination="7g7-CQ-SCV" eventType="editingChanged" id="hvh-ws-j7l"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVk-ef-pTW">
+                                <rect key="frame" x="20" y="479.33333333333331" width="374" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVT-nl-0TY">
+                                <rect key="frame" x="20" y="539" width="374" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="zuR-FS-r4H"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-q8-zxF">
+                                <rect key="frame" x="20" y="385" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yVk-ef-pTW" firstAttribute="top" secondItem="6kI-IP-COZ" secondAttribute="bottom" constant="16" id="2S6-Bw-9QC"/>
+                            <constraint firstItem="ASc-q8-zxF" firstAttribute="trailing" secondItem="6kI-IP-COZ" secondAttribute="trailing" id="3EH-lu-IrT"/>
+                            <constraint firstItem="WEB-W9-gCq" firstAttribute="bottom" secondItem="gVT-nl-0TY" secondAttribute="bottom" constant="161" id="AsU-5N-oHr"/>
+                            <constraint firstItem="6kI-IP-COZ" firstAttribute="top" secondItem="ASc-q8-zxF" secondAttribute="bottom" constant="16" id="EOg-BH-cKZ"/>
+                            <constraint firstItem="gVT-nl-0TY" firstAttribute="leading" secondItem="6kI-IP-COZ" secondAttribute="leading" id="Q3k-IX-amQ"/>
+                            <constraint firstItem="gVT-nl-0TY" firstAttribute="top" secondItem="yVk-ef-pTW" secondAttribute="bottom" constant="32" id="V0a-bI-MQk"/>
+                            <constraint firstItem="gVT-nl-0TY" firstAttribute="leading" secondItem="yVk-ef-pTW" secondAttribute="leading" id="eqe-N0-qtu"/>
+                            <constraint firstItem="ASc-q8-zxF" firstAttribute="leading" secondItem="6kI-IP-COZ" secondAttribute="leading" id="equ-I1-X9z"/>
+                            <constraint firstItem="gVT-nl-0TY" firstAttribute="trailing" secondItem="6kI-IP-COZ" secondAttribute="trailing" id="k6k-Tm-6fS"/>
+                            <constraint firstItem="gVT-nl-0TY" firstAttribute="trailing" secondItem="yVk-ef-pTW" secondAttribute="trailing" id="mei-iO-WcS"/>
+                            <constraint firstItem="gVT-nl-0TY" firstAttribute="leading" secondItem="fyo-4A-IWf" secondAttribute="leadingMargin" id="tlv-FJ-FqV"/>
+                            <constraint firstItem="gVT-nl-0TY" firstAttribute="trailing" secondItem="fyo-4A-IWf" secondAttribute="trailingMargin" id="vnp-hf-N0d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WEB-W9-gCq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Currency Conversion" id="k0F-iq-Jxs"/>
+                    <connections>
+                        <outlet property="inputTextField" destination="6kI-IP-COZ" id="C4L-lO-4T0"/>
+                        <outlet property="optionPickerView" destination="gVT-nl-0TY" id="JEB-C5-I21"/>
+                        <outlet property="outputLabel" destination="yVk-ef-pTW" id="f2N-VC-haX"/>
+                        <outlet property="rateLabel" destination="ASc-q8-zxF" id="KPJ-GR-UmQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DK1-sq-nEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1867" y="1181"/>
+        </scene>
+        <!--Temp Conversion-->
+        <scene sceneID="Cji-Da-h5w">
+            <objects>
+                <viewController id="VEI-jb-oXz" customClass="TempViewController" customModule="CompanionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Ro-CG-oIZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwb-L2-i9w">
+                                <rect key="frame" x="20" y="453" width="374" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="valueInputted:" destination="VEI-jb-oXz" eventType="editingChanged" id="83b-5J-2jp"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w6-Lq-D0p">
+                                <rect key="frame" x="20" y="507.33333333333331" width="374" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgg-0s-CNt">
+                                <rect key="frame" x="20" y="568" width="374" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="M0G-TO-t4c"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jgg-0s-CNt" firstAttribute="trailing" secondItem="8w6-Lq-D0p" secondAttribute="trailing" id="1FS-M6-gTT"/>
+                            <constraint firstItem="jgg-0s-CNt" firstAttribute="trailing" secondItem="Bwb-L2-i9w" secondAttribute="trailing" id="5hd-As-7k1"/>
+                            <constraint firstItem="jgg-0s-CNt" firstAttribute="leading" secondItem="8w6-Lq-D0p" secondAttribute="leading" id="9NW-8b-pch"/>
+                            <constraint firstItem="aWo-jL-Xk4" firstAttribute="bottom" secondItem="jgg-0s-CNt" secondAttribute="bottom" constant="132" id="NUX-OU-qqb"/>
+                            <constraint firstItem="jgg-0s-CNt" firstAttribute="leading" secondItem="2Ro-CG-oIZ" secondAttribute="leadingMargin" id="Td1-GH-QeD"/>
+                            <constraint firstItem="jgg-0s-CNt" firstAttribute="top" secondItem="8w6-Lq-D0p" secondAttribute="bottom" constant="32" id="ZCO-91-yY1"/>
+                            <constraint firstItem="jgg-0s-CNt" firstAttribute="trailing" secondItem="2Ro-CG-oIZ" secondAttribute="trailingMargin" id="b8i-x6-Jmf"/>
+                            <constraint firstItem="8w6-Lq-D0p" firstAttribute="top" secondItem="Bwb-L2-i9w" secondAttribute="bottom" constant="16" id="buQ-Jb-04t"/>
+                            <constraint firstItem="jgg-0s-CNt" firstAttribute="leading" secondItem="Bwb-L2-i9w" secondAttribute="leading" id="qnp-uo-X5F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aWo-jL-Xk4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Temp Conversion" id="jeA-sy-GdR"/>
+                    <connections>
+                        <outlet property="inputTextField" destination="Bwb-L2-i9w" id="ghb-nt-3Dk"/>
+                        <outlet property="optionPicker" destination="jgg-0s-CNt" id="FB6-3K-3nx"/>
+                        <outlet property="outputLabel" destination="8w6-Lq-D0p" id="kB9-yb-3Mx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaU-Pf-MVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="1181"/>
+        </scene>
+        <!--Distance Conversion-->
         <scene sceneID="LY8-TD-K3I">
             <objects>
                 <viewController id="l8d-73-wHd" customClass="DistanceViewController" customModule="CompanionApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,7 +273,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IqH-eg-LzU"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Distance" id="90F-j5-SDe"/>
+                    <navigationItem key="navigationItem" title="Distance Conversion" id="90F-j5-SDe"/>
                     <connections>
                         <outlet property="distanceLabel" destination="cBl-gO-EJQ" id="iNJ-MB-hSV"/>
                         <outlet property="distancePicker" destination="JAv-mL-04g" id="W8N-3g-97x"/>
@@ -147,28 +282,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nD6-h8-toU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546" y="1155"/>
+            <point key="canvasLocation" x="-384" y="1181"/>
         </scene>
         <!--Weight Conversion-->
         <scene sceneID="lj6-bC-WwL">
             <objects>
-                <viewController id="wca-ED-bo2" sceneMemberID="viewController">
+                <viewController id="wca-ED-bo2" customClass="WeightViewController" customModule="CompanionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tho-Q2-lKO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6l-3z-Kk0">
+                                <rect key="frame" x="20" y="431" width="374" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="valueInputted:" destination="wca-ED-bo2" eventType="editingChanged" id="ChC-mo-i2i"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGS-26-EDv">
+                                <rect key="frame" x="20" y="501.33333333333331" width="374" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kps-9I-8Kb">
+                                <rect key="frame" x="20" y="561" width="374" height="216"/>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kps-9I-8Kb" firstAttribute="leading" secondItem="QGS-26-EDv" secondAttribute="leading" id="148-qv-HQW"/>
+                            <constraint firstItem="kps-9I-8Kb" firstAttribute="trailing" secondItem="QGS-26-EDv" secondAttribute="trailing" id="499-u5-37h"/>
+                            <constraint firstItem="kps-9I-8Kb" firstAttribute="top" secondItem="QGS-26-EDv" secondAttribute="bottom" constant="32" id="7DK-Jv-sXg"/>
+                            <constraint firstItem="QGS-26-EDv" firstAttribute="top" secondItem="G6l-3z-Kk0" secondAttribute="bottom" constant="32" id="8Y7-18-QF1"/>
+                            <constraint firstItem="G6l-3z-Kk0" firstAttribute="leading" secondItem="Tho-Q2-lKO" secondAttribute="leadingMargin" id="995-cP-ViT"/>
+                            <constraint firstItem="G6l-3z-Kk0" firstAttribute="trailing" secondItem="QGS-26-EDv" secondAttribute="trailing" id="Yuj-1w-UCh"/>
+                            <constraint firstItem="G6l-3z-Kk0" firstAttribute="trailing" secondItem="Tho-Q2-lKO" secondAttribute="trailingMargin" id="aPE-pe-Sk1"/>
+                            <constraint firstItem="G6l-3z-Kk0" firstAttribute="top" secondItem="mP3-u8-0R8" secondAttribute="top" constant="343" id="uHN-74-4Gh"/>
+                            <constraint firstItem="G6l-3z-Kk0" firstAttribute="leading" secondItem="QGS-26-EDv" secondAttribute="leading" id="vN8-bq-b3K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mP3-u8-0R8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Weight Conversion" id="RMX-I5-QSv"/>
+                    <connections>
+                        <outlet property="inputTextField" destination="G6l-3z-Kk0" id="rNd-iu-k6B"/>
+                        <outlet property="outputLabel" destination="QGS-26-EDv" id="yE2-8R-A9A"/>
+                        <outlet property="weightPicker" destination="kps-9I-8Kb" id="KWv-Le-LI3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vX6-Ip-Amk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1335" y="558"/>
+            <point key="canvasLocation" x="348" y="1181"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.right.arrow.left" catalog="system" width="119" height="128"/>
         <image name="car" catalog="system" width="128" height="93"/>
+        <image name="dollarsign.square" catalog="system" width="128" height="114"/>
         <image name="scale" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="thermometer" catalog="system" width="87" height="128"/>
     </resources>
 </document>

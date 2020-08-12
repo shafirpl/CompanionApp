@@ -19,6 +19,7 @@
 		F054D61E24E087560045A6CB /* Conversion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F054D61D24E087560045A6CB /* Conversion.storyboard */; };
 		F054D62624E171480045A6CB /* ConversionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054D62524E171480045A6CB /* ConversionMainViewController.swift */; };
 		F062CFC024E2084E00628C5B /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062CFBF24E2084E00628C5B /* DistanceViewController.swift */; };
+		F07827C224E36B880089CDAA /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07827C124E36B880089CDAA /* WeightViewController.swift */; };
 		F095EA4524DFF3A90003284D /* AddNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095EA4424DFF3A90003284D /* AddNewNoteViewController.swift */; };
 		F0A108E624DEBF4900A1654A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A108E524DEBF4900A1654A /* AppDelegate.swift */; };
 		F0A108E824DEBF4900A1654A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A108E724DEBF4900A1654A /* SceneDelegate.swift */; };
@@ -29,6 +30,8 @@
 		F0A108F424DEBF4A00A1654A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A108F224DEBF4A00A1654A /* LaunchScreen.storyboard */; };
 		F0A108FF24DEBF4A00A1654A /* CompanionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A108FE24DEBF4A00A1654A /* CompanionAppTests.swift */; };
 		F0A1090A24DEBF4A00A1654A /* CompanionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1090924DEBF4A00A1654A /* CompanionAppUITests.swift */; };
+		F0BB6A6824E3FD62008654AA /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB6A6724E3FD62008654AA /* TempViewController.swift */; };
+		F0BB6A6A24E41992008654AA /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB6A6924E41992008654AA /* CurrencyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,7 @@
 		F054D61D24E087560045A6CB /* Conversion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conversion.storyboard; sourceTree = SOURCE_ROOT; };
 		F054D62524E171480045A6CB /* ConversionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionMainViewController.swift; sourceTree = "<group>"; };
 		F062CFBF24E2084E00628C5B /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
+		F07827C124E36B880089CDAA /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		F095EA4424DFF3A90003284D /* AddNewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNoteViewController.swift; sourceTree = "<group>"; };
 		F0A108E224DEBF4900A1654A /* CompanionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A108E524DEBF4900A1654A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 		F0A1090524DEBF4A00A1654A /* CompanionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompanionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A1090924DEBF4A00A1654A /* CompanionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanionAppUITests.swift; sourceTree = "<group>"; };
 		F0A1090B24DEBF4B00A1654A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0BB6A6724E3FD62008654AA /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		F0BB6A6924E41992008654AA /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +202,9 @@
 			children = (
 				F054D62524E171480045A6CB /* ConversionMainViewController.swift */,
 				F062CFBF24E2084E00628C5B /* DistanceViewController.swift */,
+				F07827C124E36B880089CDAA /* WeightViewController.swift */,
+				F0BB6A6724E3FD62008654AA /* TempViewController.swift */,
+				F0BB6A6924E41992008654AA /* CurrencyViewController.swift */,
 			);
 			path = Conversion;
 			sourceTree = "<group>";
@@ -500,7 +509,9 @@
 			files = (
 				F0A108EC24DEBF4900A1654A /* SecondViewController.swift in Sources */,
 				F054D62624E171480045A6CB /* ConversionMainViewController.swift in Sources */,
+				F0BB6A6824E3FD62008654AA /* TempViewController.swift in Sources */,
 				F0A108EA24DEBF4900A1654A /* FirstViewController.swift in Sources */,
+				F0BB6A6A24E41992008654AA /* CurrencyViewController.swift in Sources */,
 				F0A108E624DEBF4900A1654A /* AppDelegate.swift in Sources */,
 				F01972DF24DF9BF500C3DBBA /* NoteItemStruct.swift in Sources */,
 				F062CFC024E2084E00628C5B /* DistanceViewController.swift in Sources */,
@@ -509,6 +520,7 @@
 				F0A108E824DEBF4900A1654A /* SceneDelegate.swift in Sources */,
 				F095EA4524DFF3A90003284D /* AddNewNoteViewController.swift in Sources */,
 				F01972DD24DF9AFC00C3DBBA /* NotesMainViewController.swift in Sources */,
+				F07827C224E36B880089CDAA /* WeightViewController.swift in Sources */,
 				F01972EB24DFCBA600C3DBBA /* AddDoneButtonTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
