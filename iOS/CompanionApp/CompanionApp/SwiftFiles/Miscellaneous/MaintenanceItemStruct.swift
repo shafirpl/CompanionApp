@@ -20,4 +20,5 @@ struct maintenanceItemStruct:Decodable {
     var title: String?
     var description: String?
     var odometer: Int?
+    var id: String?
 }

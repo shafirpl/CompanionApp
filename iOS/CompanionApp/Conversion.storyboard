@@ -34,72 +34,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dL8-yU-bZu">
-                                <rect key="frame" x="20" y="309" width="374" height="278"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bIo-yM-7z7">
+                                <rect key="frame" x="49" y="534" width="316" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zg4-Cl-7bc">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="139"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slV-zl-6Qu">
-                                                <rect key="frame" x="0.0" y="0.0" width="183" height="131"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="Distance" image="car" catalog="system">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="l8d-73-wHd" kind="show" id="u2J-9V-zfE"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWy-rz-KiY">
-                                                <rect key="frame" x="191" y="0.0" width="183" height="131"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="Weight" image="scale">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="wca-ED-bo2" kind="show" id="gQh-d0-Bmv"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="8" right="0.0"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bIo-yM-7z7">
-                                        <rect key="frame" x="0.0" y="139" width="374" height="139"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUP-7i-ekJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="183" height="139"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="Temp" image="thermometer" catalog="system">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="VEI-jb-oXz" kind="show" id="AVG-UQ-Ljj"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u4-Ra-zj4">
-                                                <rect key="frame" x="191" y="0.0" width="183" height="139"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <state key="normal" title="Currency" image="dollarsign.square" catalog="system">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="7g7-CQ-SCV" kind="show" id="KMv-fA-ham"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUP-7i-ekJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="OTn-bb-qbW"/>
+                                            <constraint firstAttribute="width" constant="150" id="noV-us-cHQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Temp" image="thermometer" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="VEI-jb-oXz" kind="show" id="AVG-UQ-Ljj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u4-Ra-zj4">
+                                        <rect key="frame" x="166" y="0.0" width="150" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="GE7-za-c6c"/>
+                                            <constraint firstAttribute="height" constant="100" id="Z75-BN-voA"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Currency" image="dollarsign.square" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="7g7-CQ-SCV" kind="show" id="KMv-fA-ham"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zg4-Cl-7bc">
+                                <rect key="frame" x="49" y="366" width="316" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slV-zl-6Qu">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="T9y-ua-lQi"/>
+                                            <constraint firstAttribute="height" constant="100" id="uRs-pe-bbg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Distance" image="car" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="l8d-73-wHd" kind="show" id="u2J-9V-zfE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWy-rz-KiY">
+                                        <rect key="frame" x="166" y="0.0" width="150" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="N7I-Sa-hGs"/>
+                                            <constraint firstAttribute="height" constant="100" id="kds-WC-4To"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Weight" image="scale">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="wca-ED-bo2" kind="show" id="gQh-d0-Bmv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="8" right="0.0"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dL8-yU-bZu" firstAttribute="trailing" secondItem="TQa-Vr-u5C" secondAttribute="trailingMargin" id="6wM-cQ-Erq"/>
-                            <constraint firstItem="dL8-yU-bZu" firstAttribute="top" secondItem="QX2-1R-c9f" secondAttribute="top" constant="221" id="c6h-qg-Pbp"/>
-                            <constraint firstItem="dL8-yU-bZu" firstAttribute="centerY" secondItem="TQa-Vr-u5C" secondAttribute="centerY" id="ptF-93-70o"/>
-                            <constraint firstItem="dL8-yU-bZu" firstAttribute="leading" secondItem="TQa-Vr-u5C" secondAttribute="leadingMargin" id="q7i-71-Czr"/>
+                            <constraint firstItem="zg4-Cl-7bc" firstAttribute="centerY" secondItem="TQa-Vr-u5C" secondAttribute="centerY" constant="-28" id="9Ro-Rl-Kww"/>
+                            <constraint firstItem="zg4-Cl-7bc" firstAttribute="centerY" secondItem="TQa-Vr-u5C" secondAttribute="centerY" constant="-28" id="FJY-sZ-faj"/>
+                            <constraint firstItem="zg4-Cl-7bc" firstAttribute="centerY" secondItem="TQa-Vr-u5C" secondAttribute="centerY" constant="-28" id="IYF-45-1Jk"/>
+                            <constraint firstItem="bIo-yM-7z7" firstAttribute="centerX" secondItem="TQa-Vr-u5C" secondAttribute="centerX" id="Y8a-Os-Kwt"/>
+                            <constraint firstItem="zg4-Cl-7bc" firstAttribute="centerX" secondItem="TQa-Vr-u5C" secondAttribute="centerX" id="vb2-3S-0Vs"/>
+                            <constraint firstItem="bIo-yM-7z7" firstAttribute="top" secondItem="zg4-Cl-7bc" secondAttribute="bottom" constant="60" id="wSs-F0-dbi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QX2-1R-c9f"/>
                     </view>

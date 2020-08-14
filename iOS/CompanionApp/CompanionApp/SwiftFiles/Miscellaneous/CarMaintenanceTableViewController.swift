@@ -22,6 +22,10 @@ class CarMaintenanceTableViewController: UITableViewController {
     
     let url: String = "http://138.68.61.175:5500/maintenance"
     var records = [maintenanceItemStruct]()
+    override func viewDidAppear(_ animated: Bool) {
+        records.removeAll()
+        fetchRecords()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // self.tableView.isMultipleTouchEnabled = false
@@ -30,7 +34,25 @@ class CarMaintenanceTableViewController: UITableViewController {
         maintenanceTableView.dataSource = self
     }
 
+    func deleteNote(recordId:String){
+        // print(noteId)
+        let urlString = url + "/" + recordId
+        AF.request(urlString,method: .delete).responseJSON{
+            response in print(response)
+        }
+    }
+    
+    // swipe to delete functinality,look at NotesMainViewController to see details
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete){
+            deleteNote(recordId: self.records[indexPath.row].id ?? "")
+            records.remove(at: indexPath.row)
+            maintenanceTableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+    }
  
+
 
 
 
@@ -91,6 +113,7 @@ class CarMaintenanceTableViewController: UITableViewController {
                 record.price = obj["price"].doubleValue
                 record.odometer = obj["odometer"].intValue
                 record.place = obj["place"].stringValue
+                record.id = obj["_id"].stringValue
                 // print(record)
                 self.records.append(record)
             }

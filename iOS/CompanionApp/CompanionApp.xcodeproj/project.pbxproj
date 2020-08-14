@@ -18,6 +18,7 @@
 		F01972EB24DFCBA600C3DBBA /* AddDoneButtonTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01972EA24DFCBA600C3DBBA /* AddDoneButtonTextView.swift */; };
 		F054D61E24E087560045A6CB /* Conversion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F054D61D24E087560045A6CB /* Conversion.storyboard */; };
 		F054D62624E171480045A6CB /* ConversionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054D62524E171480045A6CB /* ConversionMainViewController.swift */; };
+		F05EF23B24E6461E00DC26A3 /* NewRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EF23A24E6461E00DC26A3 /* NewRecordViewController.swift */; };
 		F062CFC024E2084E00628C5B /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062CFBF24E2084E00628C5B /* DistanceViewController.swift */; };
 		F07827C224E36B880089CDAA /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07827C124E36B880089CDAA /* WeightViewController.swift */; };
 		F095EA4524DFF3A90003284D /* AddNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095EA4424DFF3A90003284D /* AddNewNoteViewController.swift */; };
@@ -75,6 +76,7 @@
 		F01972EA24DFCBA600C3DBBA /* AddDoneButtonTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDoneButtonTextView.swift; sourceTree = "<group>"; };
 		F054D61D24E087560045A6CB /* Conversion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conversion.storyboard; sourceTree = SOURCE_ROOT; };
 		F054D62524E171480045A6CB /* ConversionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionMainViewController.swift; sourceTree = "<group>"; };
+		F05EF23A24E6461E00DC26A3 /* NewRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordViewController.swift; sourceTree = "<group>"; };
 		F062CFBF24E2084E00628C5B /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		F07827C124E36B880089CDAA /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		F095EA4424DFF3A90003284D /* AddNewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNoteViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				F09AA5FB24E58AD400716741 /* MaintenanceItemStruct.swift */,
 				F09AA5FD24E59A6C00716741 /* RecordDetailsViewController.swift */,
 				F09AA5FF24E5AE1200716741 /* MaintenanceItemTableViewCell.swift */,
+				F05EF23A24E6461E00DC26A3 /* NewRecordViewController.swift */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				F0A108EC24DEBF4900A1654A /* SecondViewController.swift in Sources */,
 				F054D62624E171480045A6CB /* ConversionMainViewController.swift in Sources */,
 				F0BB6A6824E3FD62008654AA /* TempViewController.swift in Sources */,
+				F05EF23B24E6461E00DC26A3 /* NewRecordViewController.swift in Sources */,
 				F0A108EA24DEBF4900A1654A /* FirstViewController.swift in Sources */,
 				F0BB6A6A24E41992008654AA /* CurrencyViewController.swift in Sources */,
 				F0A108E624DEBF4900A1654A /* AppDelegate.swift in Sources */,
