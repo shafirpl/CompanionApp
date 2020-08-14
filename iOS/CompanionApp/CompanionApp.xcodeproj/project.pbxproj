@@ -20,6 +20,8 @@
 		F054D62624E171480045A6CB /* ConversionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054D62524E171480045A6CB /* ConversionMainViewController.swift */; };
 		F05EF23B24E6461E00DC26A3 /* NewRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EF23A24E6461E00DC26A3 /* NewRecordViewController.swift */; };
 		F062CFC024E2084E00628C5B /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062CFBF24E2084E00628C5B /* DistanceViewController.swift */; };
+		F071ECB824E6BCF90042D83C /* AlignImageAndTextVerticallyInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071ECB724E6BCF90042D83C /* AlignImageAndTextVerticallyInButton.swift */; };
+		F071ECBA24E719840042D83C /* RiceWaterRatioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071ECB924E719840042D83C /* RiceWaterRatioViewController.swift */; };
 		F07827C224E36B880089CDAA /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07827C124E36B880089CDAA /* WeightViewController.swift */; };
 		F095EA4524DFF3A90003284D /* AddNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095EA4424DFF3A90003284D /* AddNewNoteViewController.swift */; };
 		F09AA5F524E4C41D00716741 /* Miscellaneous.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F09AA5F424E4C41C00716741 /* Miscellaneous.storyboard */; };
@@ -78,6 +80,8 @@
 		F054D62524E171480045A6CB /* ConversionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionMainViewController.swift; sourceTree = "<group>"; };
 		F05EF23A24E6461E00DC26A3 /* NewRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordViewController.swift; sourceTree = "<group>"; };
 		F062CFBF24E2084E00628C5B /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
+		F071ECB724E6BCF90042D83C /* AlignImageAndTextVerticallyInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignImageAndTextVerticallyInButton.swift; sourceTree = "<group>"; };
+		F071ECB924E719840042D83C /* RiceWaterRatioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiceWaterRatioViewController.swift; sourceTree = "<group>"; };
 		F07827C124E36B880089CDAA /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		F095EA4424DFF3A90003284D /* AddNewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNoteViewController.swift; sourceTree = "<group>"; };
 		F09AA5F424E4C41C00716741 /* Miscellaneous.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Miscellaneous.storyboard; sourceTree = SOURCE_ROOT; };
@@ -201,6 +205,7 @@
 			children = (
 				F01972E824DFCB5A00C3DBBA /* AddDoneButtonTextField.swift */,
 				F01972EA24DFCBA600C3DBBA /* AddDoneButtonTextView.swift */,
+				F071ECB724E6BCF90042D83C /* AlignImageAndTextVerticallyInButton.swift */,
 			);
 			path = AdditionalStuff;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				F09AA5FD24E59A6C00716741 /* RecordDetailsViewController.swift */,
 				F09AA5FF24E5AE1200716741 /* MaintenanceItemTableViewCell.swift */,
 				F05EF23A24E6461E00DC26A3 /* NewRecordViewController.swift */,
+				F071ECB924E719840042D83C /* RiceWaterRatioViewController.swift */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -553,12 +559,14 @@
 				F0BB6A6824E3FD62008654AA /* TempViewController.swift in Sources */,
 				F05EF23B24E6461E00DC26A3 /* NewRecordViewController.swift in Sources */,
 				F0A108EA24DEBF4900A1654A /* FirstViewController.swift in Sources */,
+				F071ECBA24E719840042D83C /* RiceWaterRatioViewController.swift in Sources */,
 				F0BB6A6A24E41992008654AA /* CurrencyViewController.swift in Sources */,
 				F0A108E624DEBF4900A1654A /* AppDelegate.swift in Sources */,
 				F01972DF24DF9BF500C3DBBA /* NoteItemStruct.swift in Sources */,
 				F062CFC024E2084E00628C5B /* DistanceViewController.swift in Sources */,
 				F09AA5F824E4E99000716741 /* MiscellaneousMainViewController.swift in Sources */,
 				F01972D724DF971100C3DBBA /* NoteDetailsViewController.swift in Sources */,
+				F071ECB824E6BCF90042D83C /* AlignImageAndTextVerticallyInButton.swift in Sources */,
 				F01972E924DFCB5A00C3DBBA /* AddDoneButtonTextField.swift in Sources */,
 				F09AA5FE24E59A6C00716741 /* RecordDetailsViewController.swift in Sources */,
 				F0A108E824DEBF4900A1654A /* SceneDelegate.swift in Sources */,

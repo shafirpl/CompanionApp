@@ -33,9 +33,9 @@ class ConversionMainViewController: UIViewController {
         button.layer.shadowOpacity = 1
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.lightGray.cgColor
+        button.alignImageAndTitleVertically()
     }
     
-
-
-
 }
+
+
