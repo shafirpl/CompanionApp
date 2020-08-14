@@ -21,6 +21,12 @@
 		F062CFC024E2084E00628C5B /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062CFBF24E2084E00628C5B /* DistanceViewController.swift */; };
 		F07827C224E36B880089CDAA /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07827C124E36B880089CDAA /* WeightViewController.swift */; };
 		F095EA4524DFF3A90003284D /* AddNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F095EA4424DFF3A90003284D /* AddNewNoteViewController.swift */; };
+		F09AA5F524E4C41D00716741 /* Miscellaneous.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F09AA5F424E4C41C00716741 /* Miscellaneous.storyboard */; };
+		F09AA5F824E4E99000716741 /* MiscellaneousMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AA5F724E4E99000716741 /* MiscellaneousMainViewController.swift */; };
+		F09AA5FA24E5864800716741 /* CarMaintenanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AA5F924E5864800716741 /* CarMaintenanceTableViewController.swift */; };
+		F09AA5FC24E58AD400716741 /* MaintenanceItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AA5FB24E58AD400716741 /* MaintenanceItemStruct.swift */; };
+		F09AA5FE24E59A6C00716741 /* RecordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AA5FD24E59A6C00716741 /* RecordDetailsViewController.swift */; };
+		F09AA60024E5AE1200716741 /* MaintenanceItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AA5FF24E5AE1200716741 /* MaintenanceItemTableViewCell.swift */; };
 		F0A108E624DEBF4900A1654A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A108E524DEBF4900A1654A /* AppDelegate.swift */; };
 		F0A108E824DEBF4900A1654A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A108E724DEBF4900A1654A /* SceneDelegate.swift */; };
 		F0A108EA24DEBF4900A1654A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A108E924DEBF4900A1654A /* FirstViewController.swift */; };
@@ -72,6 +78,12 @@
 		F062CFBF24E2084E00628C5B /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		F07827C124E36B880089CDAA /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		F095EA4424DFF3A90003284D /* AddNewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNoteViewController.swift; sourceTree = "<group>"; };
+		F09AA5F424E4C41C00716741 /* Miscellaneous.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Miscellaneous.storyboard; sourceTree = SOURCE_ROOT; };
+		F09AA5F724E4E99000716741 /* MiscellaneousMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscellaneousMainViewController.swift; sourceTree = "<group>"; };
+		F09AA5F924E5864800716741 /* CarMaintenanceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMaintenanceTableViewController.swift; sourceTree = "<group>"; };
+		F09AA5FB24E58AD400716741 /* MaintenanceItemStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceItemStruct.swift; sourceTree = "<group>"; };
+		F09AA5FD24E59A6C00716741 /* RecordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailsViewController.swift; sourceTree = "<group>"; };
+		F09AA5FF24E5AE1200716741 /* MaintenanceItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceItemTableViewCell.swift; sourceTree = "<group>"; };
 		F0A108E224DEBF4900A1654A /* CompanionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A108E524DEBF4900A1654A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0A108E724DEBF4900A1654A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +157,7 @@
 		F01972D024DF8C6100C3DBBA /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				F09AA5F324E4C3DA00716741 /* Miscellaneous */,
 				F054D61A24E086AA0045A6CB /* Conversion */,
 				F01972D924DF978B00C3DBBA /* Notes */,
 			);
@@ -154,6 +167,7 @@
 		F01972D424DF968300C3DBBA /* SwiftFiles */ = {
 			isa = PBXGroup;
 			children = (
+				F09AA5F624E4E95900716741 /* Miscellaneous */,
 				F054D61B24E086C10045A6CB /* Conversion */,
 				F01972E124DFC7A700C3DBBA /* AdditionalStuff */,
 				F01972D524DF96DF00C3DBBA /* Notes */,
@@ -207,6 +221,26 @@
 				F0BB6A6924E41992008654AA /* CurrencyViewController.swift */,
 			);
 			path = Conversion;
+			sourceTree = "<group>";
+		};
+		F09AA5F324E4C3DA00716741 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				F09AA5F424E4C41C00716741 /* Miscellaneous.storyboard */,
+			);
+			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		F09AA5F624E4E95900716741 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				F09AA5F724E4E99000716741 /* MiscellaneousMainViewController.swift */,
+				F09AA5F924E5864800716741 /* CarMaintenanceTableViewController.swift */,
+				F09AA5FB24E58AD400716741 /* MaintenanceItemStruct.swift */,
+				F09AA5FD24E59A6C00716741 /* RecordDetailsViewController.swift */,
+				F09AA5FF24E5AE1200716741 /* MaintenanceItemTableViewCell.swift */,
+			);
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 		F0A108D924DEBF4900A1654A = {
@@ -376,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F054D61E24E087560045A6CB /* Conversion.storyboard in Resources */,
+				F09AA5F524E4C41D00716741 /* Miscellaneous.storyboard in Resources */,
 				F01972D224DF8D0100C3DBBA /* Notes.storyboard in Resources */,
 				F0A108F424DEBF4A00A1654A /* LaunchScreen.storyboard in Resources */,
 				F0A108F124DEBF4A00A1654A /* Assets.xcassets in Resources */,
@@ -507,6 +542,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F09AA5FA24E5864800716741 /* CarMaintenanceTableViewController.swift in Sources */,
+				F09AA5FC24E58AD400716741 /* MaintenanceItemStruct.swift in Sources */,
+				F09AA60024E5AE1200716741 /* MaintenanceItemTableViewCell.swift in Sources */,
 				F0A108EC24DEBF4900A1654A /* SecondViewController.swift in Sources */,
 				F054D62624E171480045A6CB /* ConversionMainViewController.swift in Sources */,
 				F0BB6A6824E3FD62008654AA /* TempViewController.swift in Sources */,
@@ -515,8 +553,10 @@
 				F0A108E624DEBF4900A1654A /* AppDelegate.swift in Sources */,
 				F01972DF24DF9BF500C3DBBA /* NoteItemStruct.swift in Sources */,
 				F062CFC024E2084E00628C5B /* DistanceViewController.swift in Sources */,
+				F09AA5F824E4E99000716741 /* MiscellaneousMainViewController.swift in Sources */,
 				F01972D724DF971100C3DBBA /* NoteDetailsViewController.swift in Sources */,
 				F01972E924DFCB5A00C3DBBA /* AddDoneButtonTextField.swift in Sources */,
+				F09AA5FE24E59A6C00716741 /* RecordDetailsViewController.swift in Sources */,
 				F0A108E824DEBF4900A1654A /* SceneDelegate.swift in Sources */,
 				F095EA4524DFF3A90003284D /* AddNewNoteViewController.swift in Sources */,
 				F01972DD24DF9AFC00C3DBBA /* NotesMainViewController.swift in Sources */,

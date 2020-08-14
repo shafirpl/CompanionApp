@@ -65,9 +65,9 @@ class CurrencyViewController: UIViewController {
              */
             let curr = currencyData[0]["FXUSDCAD"]["v"]
 
-            let tempVal = curr.string!
+            // let tempVal = curr.string!
             
-            originalConversionRate = Double(tempVal)!
+            originalConversionRate = curr.doubleValue
             
             conversionRate = originalConversionRate
             let rateLabelText = "Today's Bank of Canada's rate is: " + String(originalConversionRate)

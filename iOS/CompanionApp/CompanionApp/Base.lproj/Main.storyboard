@@ -3,26 +3,9 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Miscellaneous-->
-        <scene sceneID="KTX-uP-AF3">
-            <objects>
-                <viewController id="GYo-XB-asJ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FOk-fS-fyN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="0Zb-K8-w5m"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Miscellaneous" image="desktopcomputer" catalog="system" id="b1W-7a-JER"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FYa-xG-QoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="425" y="463"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -35,7 +18,7 @@
                     <connections>
                         <segue destination="btT-2V-UnD" kind="relationship" relationship="viewControllers" id="p4P-jY-eji"/>
                         <segue destination="JRM-3a-DXc" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="GYo-XB-asJ" kind="relationship" relationship="viewControllers" id="8dZ-0p-i5V"/>
+                        <segue destination="Fun-u4-YJ0" kind="relationship" relationship="viewControllers" id="8dZ-0p-i5V"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -62,8 +45,15 @@
             </objects>
             <point key="canvasLocation" x="-259" y="464"/>
         </scene>
+        <!--Miscellaneous-->
+        <scene sceneID="gij-3W-yw3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Miscellaneous" id="Fun-u4-YJ0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="buJ-Da-kOa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqI-IX-1oI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="463"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="desktopcomputer" catalog="system" width="128" height="101"/>
-    </resources>
 </document>
