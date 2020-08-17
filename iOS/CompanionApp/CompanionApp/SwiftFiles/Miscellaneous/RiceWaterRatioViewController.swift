@@ -70,7 +70,7 @@ extension RiceWaterRatioViewController: UIPickerViewDataSource, UIPickerViewDele
         inputTextField.text = ""
         outputLabel.text = defaultString
         switch row {
-        case 1,2:
+        case 0,1:
             requiredCups = 1.5
             
         default:

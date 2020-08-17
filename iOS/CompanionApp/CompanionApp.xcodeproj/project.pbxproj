@@ -16,6 +16,8 @@
 		F01972DF24DF9BF500C3DBBA /* NoteItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01972DE24DF9BF500C3DBBA /* NoteItemStruct.swift */; };
 		F01972E924DFCB5A00C3DBBA /* AddDoneButtonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01972E824DFCB5A00C3DBBA /* AddDoneButtonTextField.swift */; };
 		F01972EB24DFCBA600C3DBBA /* AddDoneButtonTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01972EA24DFCBA600C3DBBA /* AddDoneButtonTextView.swift */; };
+		F02661BE24EADFA000FA741C /* PcTempDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02661BD24EADFA000FA741C /* PcTempDetailsViewController.swift */; };
+		F02661C024EB29C600FA741C /* AddNewPCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02661BF24EB29C600FA741C /* AddNewPCViewController.swift */; };
 		F054D61E24E087560045A6CB /* Conversion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F054D61D24E087560045A6CB /* Conversion.storyboard */; };
 		F054D62624E171480045A6CB /* ConversionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054D62524E171480045A6CB /* ConversionMainViewController.swift */; };
 		F05EF23B24E6461E00DC26A3 /* NewRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EF23A24E6461E00DC26A3 /* NewRecordViewController.swift */; };
@@ -76,6 +78,8 @@
 		F01972DE24DF9BF500C3DBBA /* NoteItemStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItemStruct.swift; sourceTree = "<group>"; };
 		F01972E824DFCB5A00C3DBBA /* AddDoneButtonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDoneButtonTextField.swift; sourceTree = "<group>"; };
 		F01972EA24DFCBA600C3DBBA /* AddDoneButtonTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDoneButtonTextView.swift; sourceTree = "<group>"; };
+		F02661BD24EADFA000FA741C /* PcTempDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PcTempDetailsViewController.swift; sourceTree = "<group>"; };
+		F02661BF24EB29C600FA741C /* AddNewPCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPCViewController.swift; sourceTree = "<group>"; };
 		F054D61D24E087560045A6CB /* Conversion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conversion.storyboard; sourceTree = SOURCE_ROOT; };
 		F054D62524E171480045A6CB /* ConversionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionMainViewController.swift; sourceTree = "<group>"; };
 		F05EF23A24E6461E00DC26A3 /* NewRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 				F09AA5FF24E5AE1200716741 /* MaintenanceItemTableViewCell.swift */,
 				F05EF23A24E6461E00DC26A3 /* NewRecordViewController.swift */,
 				F071ECB924E719840042D83C /* RiceWaterRatioViewController.swift */,
+				F02661BD24EADFA000FA741C /* PcTempDetailsViewController.swift */,
+				F02661BF24EB29C600FA741C /* AddNewPCViewController.swift */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -557,6 +563,7 @@
 				F0A108EC24DEBF4900A1654A /* SecondViewController.swift in Sources */,
 				F054D62624E171480045A6CB /* ConversionMainViewController.swift in Sources */,
 				F0BB6A6824E3FD62008654AA /* TempViewController.swift in Sources */,
+				F02661BE24EADFA000FA741C /* PcTempDetailsViewController.swift in Sources */,
 				F05EF23B24E6461E00DC26A3 /* NewRecordViewController.swift in Sources */,
 				F0A108EA24DEBF4900A1654A /* FirstViewController.swift in Sources */,
 				F071ECBA24E719840042D83C /* RiceWaterRatioViewController.swift in Sources */,
@@ -564,6 +571,7 @@
 				F0A108E624DEBF4900A1654A /* AppDelegate.swift in Sources */,
 				F01972DF24DF9BF500C3DBBA /* NoteItemStruct.swift in Sources */,
 				F062CFC024E2084E00628C5B /* DistanceViewController.swift in Sources */,
+				F02661C024EB29C600FA741C /* AddNewPCViewController.swift in Sources */,
 				F09AA5F824E4E99000716741 /* MiscellaneousMainViewController.swift in Sources */,
 				F01972D724DF971100C3DBBA /* NoteDetailsViewController.swift in Sources */,
 				F071ECB824E6BCF90042D83C /* AlignImageAndTextVerticallyInButton.swift in Sources */,
