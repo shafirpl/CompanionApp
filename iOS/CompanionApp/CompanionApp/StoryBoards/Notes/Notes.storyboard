@@ -68,7 +68,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MPX-Ny-IUR">
-                                <rect key="frame" x="16" y="172" width="343" height="463"/>
+                                <rect key="frame" x="16" y="172" width="343" height="457"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <accessibility key="accessibilityConfiguration" hint="Description"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -76,8 +76,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="112-dQ-Hyf">
-                                <rect key="frame" x="155" y="667" width="65" height="30"/>
+                                <rect key="frame" x="146" y="661" width="83" height="36"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Note">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
@@ -93,7 +94,6 @@
                             <constraint firstItem="FRJ-hU-FdW" firstAttribute="leading" secondItem="0Mt-vP-Jjd" secondAttribute="leadingMargin" id="JrO-dn-gyn"/>
                             <constraint firstItem="112-dQ-Hyf" firstAttribute="top" secondItem="MPX-Ny-IUR" secondAttribute="bottom" constant="32" id="MM1-cF-NWH"/>
                             <constraint firstItem="FRJ-hU-FdW" firstAttribute="top" secondItem="lN5-Xz-LBZ" secondAttribute="top" constant="16" id="UAF-Wc-s7s"/>
-                            <constraint firstItem="112-dQ-Hyf" firstAttribute="leading" secondItem="lN5-Xz-LBZ" secondAttribute="leading" constant="155" id="ZnD-6s-Qyh"/>
                             <constraint firstItem="lN5-Xz-LBZ" firstAttribute="bottom" secondItem="112-dQ-Hyf" secondAttribute="bottom" constant="32" id="sh8-bM-o3r"/>
                             <constraint firstItem="112-dQ-Hyf" firstAttribute="centerX" secondItem="0Mt-vP-Jjd" secondAttribute="centerX" id="siV-O7-VkR"/>
                             <constraint firstItem="MPX-Ny-IUR" firstAttribute="top" secondItem="FRJ-hU-FdW" secondAttribute="bottom" constant="32" id="yIL-cu-5yg"/>
@@ -126,7 +126,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zkL-Fb-vdL">
-                                <rect key="frame" x="16" y="172" width="343" height="457"/>
+                                <rect key="frame" x="16" y="172" width="343" height="451"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -134,8 +134,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpe-z3-Hf8">
-                                <rect key="frame" x="144.66666666666666" y="665" width="86" height="30"/>
+                                <rect key="frame" x="133.66666666666666" y="659" width="108" height="36"/>
                                 <color key="backgroundColor" red="0.11162426744303305" green="0.43427411933523308" blue="0.19599869434367859" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Confirm Edit">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>

@@ -34,27 +34,35 @@ class CarMaintenanceTableViewController: UITableViewController {
         maintenanceTableView.dataSource = self
     }
 
-    func deleteNote(recordId:String){
-        // print(noteId)
+    func showAlert(indexPath:IndexPath){
+        let alert = UIAlertController(title: "Are You Sure", message: "This Action is Permanent", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {
+            action in
+            self.deleteNote(recordId: self.records[indexPath.row].id ?? "", indexPath: indexPath)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        present(alert, animated: true)
+    }
+    
+    func deleteNote(recordId:String, indexPath:IndexPath){
         let urlString = url + "/" + recordId
         AF.request(urlString,method: .delete).responseJSON{
             response in print(response)
         }
+        records.remove(at: indexPath.row)
+        maintenanceTableView.deleteRows(at: [indexPath], with: .fade)
     }
+
     
     // swipe to delete functinality,look at NotesMainViewController to see details
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete){
-            deleteNote(recordId: self.records[indexPath.row].id ?? "")
-            records.remove(at: indexPath.row)
-            maintenanceTableView.deleteRows(at: [indexPath], with: .fade)
+            showAlert(indexPath: indexPath)
             
         }
     }
  
-
-
-
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return records.count

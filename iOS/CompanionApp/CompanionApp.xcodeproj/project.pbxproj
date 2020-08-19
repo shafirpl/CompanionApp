@@ -41,6 +41,9 @@
 		F0A108F424DEBF4A00A1654A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A108F224DEBF4A00A1654A /* LaunchScreen.storyboard */; };
 		F0A108FF24DEBF4A00A1654A /* CompanionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A108FE24DEBF4A00A1654A /* CompanionAppTests.swift */; };
 		F0A1090A24DEBF4A00A1654A /* CompanionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1090924DEBF4A00A1654A /* CompanionAppUITests.swift */; };
+		F0AA2C8E24EB42DA00F56CD9 /* PcTempMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA2C8D24EB42DA00F56CD9 /* PcTempMainTableViewController.swift */; };
+		F0AA2C9024EB486000F56CD9 /* ipAddressStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA2C8F24EB486000F56CD9 /* ipAddressStruct.swift */; };
+		F0AA2C9224EB55FD00F56CD9 /* PcTempTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA2C9124EB55FD00F56CD9 /* PcTempTableViewCell.swift */; };
 		F0BB6A6824E3FD62008654AA /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB6A6724E3FD62008654AA /* TempViewController.swift */; };
 		F0BB6A6A24E41992008654AA /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB6A6924E41992008654AA /* CurrencyViewController.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +112,9 @@
 		F0A1090524DEBF4A00A1654A /* CompanionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompanionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A1090924DEBF4A00A1654A /* CompanionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanionAppUITests.swift; sourceTree = "<group>"; };
 		F0A1090B24DEBF4B00A1654A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0AA2C8D24EB42DA00F56CD9 /* PcTempMainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PcTempMainTableViewController.swift; sourceTree = "<group>"; };
+		F0AA2C8F24EB486000F56CD9 /* ipAddressStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ipAddressStruct.swift; sourceTree = "<group>"; };
+		F0AA2C9124EB55FD00F56CD9 /* PcTempTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PcTempTableViewCell.swift; sourceTree = "<group>"; };
 		F0BB6A6724E3FD62008654AA /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 		F0BB6A6924E41992008654AA /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,6 +260,9 @@
 				F071ECB924E719840042D83C /* RiceWaterRatioViewController.swift */,
 				F02661BD24EADFA000FA741C /* PcTempDetailsViewController.swift */,
 				F02661BF24EB29C600FA741C /* AddNewPCViewController.swift */,
+				F0AA2C8D24EB42DA00F56CD9 /* PcTempMainTableViewController.swift */,
+				F0AA2C8F24EB486000F56CD9 /* ipAddressStruct.swift */,
+				F0AA2C9124EB55FD00F56CD9 /* PcTempTableViewCell.swift */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -558,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F09AA5FA24E5864800716741 /* CarMaintenanceTableViewController.swift in Sources */,
+				F0AA2C8E24EB42DA00F56CD9 /* PcTempMainTableViewController.swift in Sources */,
 				F09AA5FC24E58AD400716741 /* MaintenanceItemStruct.swift in Sources */,
 				F09AA60024E5AE1200716741 /* MaintenanceItemTableViewCell.swift in Sources */,
 				F0A108EC24DEBF4900A1654A /* SecondViewController.swift in Sources */,
@@ -580,7 +590,9 @@
 				F0A108E824DEBF4900A1654A /* SceneDelegate.swift in Sources */,
 				F095EA4524DFF3A90003284D /* AddNewNoteViewController.swift in Sources */,
 				F01972DD24DF9AFC00C3DBBA /* NotesMainViewController.swift in Sources */,
+				F0AA2C9224EB55FD00F56CD9 /* PcTempTableViewCell.swift in Sources */,
 				F07827C224E36B880089CDAA /* WeightViewController.swift in Sources */,
+				F0AA2C9024EB486000F56CD9 /* ipAddressStruct.swift in Sources */,
 				F01972EB24DFCBA600C3DBBA /* AddDoneButtonTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

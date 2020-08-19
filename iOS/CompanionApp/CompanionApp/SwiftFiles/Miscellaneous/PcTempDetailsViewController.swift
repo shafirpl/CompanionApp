@@ -15,6 +15,8 @@ class PcTempDetailsViewController: UIViewController {
     @IBOutlet weak var cpuView: UIView!
     @IBOutlet weak var memView: UIView!
     @IBOutlet weak var infoView: UIView!
+    var ipAddress: String?
+    var url:String = "http://"
     
     var fetchTimer:Timer?
     @IBOutlet weak var cpuUsageBar: UIProgressView!
@@ -40,6 +42,7 @@ class PcTempDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(fetchStatus), userInfo: nil, repeats: true)
+        url += self.ipAddress!+":4200/socket"
         stylingView(myView: cpuView)
         stylingView(myView: memView)
         stylingView(myView: infoView)
@@ -67,7 +70,7 @@ class PcTempDetailsViewController: UIViewController {
     
 
     @objc func fetchStatus(){
-        let url:String = "http://192.168.0.189:4200/socket"
+        //let url:String = "http://192.168.0.189:4200/socket"
         AF.request(url,method: .get).responseJSON(completionHandler: {
             response in
             let data = JSON(response.data!)

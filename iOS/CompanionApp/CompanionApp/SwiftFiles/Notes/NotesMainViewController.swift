@@ -96,22 +96,43 @@ class NotesMainViewController: UIViewController, UITableViewDelegate, UITableVie
              * then we need to delete the entry from our array manually
              * after only then we can delete the row and do the animation
              */
-            deleteNote(noteId: self.notes[indexPath.row].noteId)
-            notes.remove(at: indexPath.row)
-            notesTableView.deleteRows(at: [indexPath], with: .fade)
+            showAlert(indexPath: indexPath)
+            // deleteNote function was called first
+//            notes.remove(at: indexPath.row)
+//            notesTableView.deleteRows(at: [indexPath], with: .fade)
             
             
             
         }
     }
+    func showAlert(indexPath:IndexPath){
+        let alert = UIAlertController(title: "Are You Sure", message: "This Action is Permanent", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {
+            action in
+            self.deleteNote(recordId: self.notes[indexPath.row].noteId , indexPath: indexPath)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        present(alert, animated: true)
+    }
     
-    func deleteNote(noteId:String){
-        // print(noteId)
-        let url = urlString + "/" + noteId
+    func deleteNote(recordId:String, indexPath:IndexPath){
+        let url = urlString + "/" + recordId
         AF.request(url,method: .delete).responseJSON{
             response in print(response)
         }
+        notes.remove(at: indexPath.row)
+        notesTableView.deleteRows(at: [indexPath], with: .fade)
     }
+
+    
+//    func deleteNote(noteId:String){
+//        // print(noteId)
+//        let url = urlString + "/" + noteId
+//        AF.request(url,method: .delete).responseJSON{
+//            response in print(response)
+//        }
+//    }
     
     /*
      * basically with the closure completed function, what will happen is that

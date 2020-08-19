@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTy-Yl-RMH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58i-wK-MD6">
                                         <rect key="frame" x="0.0" y="0.0" width="406" height="720"/>
@@ -419,7 +419,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fmz-8H-SjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="-663"/>
+            <point key="canvasLocation" x="2762" y="1931"/>
         </scene>
         <!--Rice:Water Ratio-->
         <scene sceneID="4Qe-Mn-wKO">
@@ -672,7 +672,7 @@
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkM-bK-5Xv">
                                                 <rect key="frame" x="133" y="631" width="108" height="36"/>
-                                                <color key="backgroundColor" red="0.1116242674" green="0.43427411929999998" blue="0.1959986943" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.10980392156862745" green="0.43529411764705883" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Confirm Edit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -991,19 +991,39 @@
         <!--PC List-->
         <scene sceneID="KOf-W5-JSr">
             <objects>
-                <tableViewController id="mO8-Nn-Zge" sceneMemberID="viewController">
+                <tableViewController id="mO8-Nn-Zge" customClass="PcTempMainTableViewController" customModule="CompanionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Ye-jK-bvp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aA9-RF-6gN">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PcTempTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PcTempTableViewCell" textLabel="8RS-py-CxB" detailTextLabel="ExN-iS-CCK" style="IBUITableViewCellStyleValue1" id="aA9-RF-6gN" customClass="PcTempTableViewCell" customModule="CompanionApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="57.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aA9-RF-6gN" id="LNc-3z-8Ii">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="57.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8RS-py-CxB">
+                                            <rect key="frame" x="20.000000000000004" y="15.000000000000002" width="45.333333333333336" height="28.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ExN-iS-CCK">
+                                            <rect key="frame" x="334.33333333333331" y="15.000000000000002" width="59.666666666666664" height="28.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="compNameLabel" destination="8RS-py-CxB" id="sW3-Oo-Vpv"/>
+                                    <outlet property="ipAddressLabel" destination="ExN-iS-CCK" id="rnc-om-Fhx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1014,10 +1034,14 @@
                     <navigationItem key="navigationItem" title="PC List" id="RKU-Rs-I3N">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="LSl-Xn-WfQ">
                             <connections>
-                                <segue destination="Hfc-T6-P8d" kind="show" id="zTt-cO-osd"/>
+                                <segue destination="Hfc-T6-P8d" kind="show" identifier="pcItemIdentifier" id="zTt-cO-osd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pcListTableView" destination="7Ye-jK-bvp" id="neW-1m-r19"/>
+                        <segue destination="SpM-Kp-P8p" kind="show" identifier="showTempDetails" id="K3f-HG-rqj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSo-hh-WXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1075,7 +1099,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLc-dN-WjM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3331.884057971015" y="1189.2857142857142"/>
+            <point key="canvasLocation" x="3543" y="1931"/>
         </scene>
     </scenes>
     <resources>
