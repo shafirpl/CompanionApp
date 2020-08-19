@@ -35,7 +35,6 @@ class PcTempMainTableViewController: UITableViewController {
     
     func goToEditController(){
         self.editingMode = true
-        print(selectedRow ?? -1)
         self.performSegue(withIdentifier: "pcItemIdentifier", sender: self)
         self.editingMode = false
     }
@@ -66,6 +65,7 @@ class PcTempMainTableViewController: UITableViewController {
         else if let destination = segue.destination as? PcTempDetailsViewController{
             let record:ipAddressStruct = records[(pcListTableView.indexPathForSelectedRow?.row)!]
             destination.ipAddress = record.ipAddress
+            destination.givenName = record.pcName
         }
     }
 
@@ -91,10 +91,6 @@ class PcTempMainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete){
             showAlert(indexPath: indexPath)
-//            deleteNote(recordId: self.records[indexPath.row].id ?? "")
-//            records.remove(at: indexPath.row)
-//            pcListTableView.deleteRows(at: [indexPath], with: .fade)
-            
         }
     }
 

@@ -17,6 +17,7 @@ class PcTempDetailsViewController: UIViewController {
     @IBOutlet weak var infoView: UIView!
     var ipAddress: String?
     var url:String = "http://"
+    var givenName:String?
     
     var fetchTimer:Timer?
     @IBOutlet weak var cpuUsageBar: UIProgressView!
@@ -120,6 +121,8 @@ class PcTempDetailsViewController: UIViewController {
                 self.totalMemLabel.text = (data["totalMem"].stringValue)+"GB"
                 
                 self.originalNameLabel.text = data["compName"].stringValue
+                self.givenNameLabel.text = self.givenName
+                self.ipAddressLabel.text = self.ipAddress
                 
             }
         })

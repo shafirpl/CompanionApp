@@ -95,31 +95,31 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58i-wK-MD6">
-                                        <rect key="frame" x="0.0" y="0.0" width="406" height="720"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="720"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLj-Qm-2Bl">
-                                                <rect key="frame" x="8" y="16" width="390" height="216"/>
+                                                <rect key="frame" x="8" y="16" width="398" height="216"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axc-3I-uXD">
-                                                        <rect key="frame" x="164" y="16" width="62.333333333333343" height="36"/>
+                                                        <rect key="frame" x="168" y="16" width="62.333333333333343" height="36"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RZZ-kV-rXk">
-                                                        <rect key="frame" x="16" y="68" width="358" height="2"/>
+                                                        <rect key="frame" x="16" y="68" width="366" height="2"/>
                                                     </progressView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvK-iQ-wXs">
-                                                        <rect key="frame" x="8" y="86" width="374" height="24"/>
+                                                        <rect key="frame" x="8" y="86" width="382" height="24"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU Usage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecD-qr-Ewd">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Offline" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCw-hi-SeG">
-                                                                <rect key="frame" x="187" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="191" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -127,16 +127,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJe-IY-HRf">
-                                                        <rect key="frame" x="8" y="126" width="374" height="24"/>
+                                                        <rect key="frame" x="8" y="126" width="382" height="24"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgM-Ir-8Tx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Offline" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19u-FO-NaV">
-                                                                <rect key="frame" x="187" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="191" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -144,16 +144,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITa-f8-6HF">
-                                                        <rect key="frame" x="8" y="166" width="374" height="24"/>
+                                                        <rect key="frame" x="8" y="166" width="382" height="24"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-BW-aED">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Offline" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0B-0q-ihl">
-                                                                <rect key="frame" x="187" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="191" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -191,28 +191,28 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gt-0C-dik">
-                                                <rect key="frame" x="8" y="248" width="390" height="216"/>
+                                                <rect key="frame" x="8" y="248" width="398" height="216"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mea-19-Y4Y">
-                                                        <rect key="frame" x="137.33333333333334" y="16" width="115.33333333333334" height="36"/>
+                                                        <rect key="frame" x="141.33333333333334" y="16" width="115.33333333333334" height="36"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="feX-0e-LNZ">
-                                                        <rect key="frame" x="8" y="68" width="374" height="2"/>
+                                                        <rect key="frame" x="8" y="68" width="382" height="2"/>
                                                     </progressView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNt-sY-pfV">
-                                                        <rect key="frame" x="8" y="86" width="374" height="24"/>
+                                                        <rect key="frame" x="8" y="86" width="382" height="24"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mem Usage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkY-VL-60C">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Offline" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0k-XK-EYh">
-                                                                <rect key="frame" x="187" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="191" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -220,16 +220,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTC-8A-dCq">
-                                                        <rect key="frame" x="8" y="126" width="374" height="24"/>
+                                                        <rect key="frame" x="8" y="126" width="382" height="24"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mem Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIO-LY-M5u">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Offline" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nu-7d-h9Q">
-                                                                <rect key="frame" x="187" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="191" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -237,16 +237,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHH-h7-deC">
-                                                        <rect key="frame" x="8" y="166" width="374" height="24"/>
+                                                        <rect key="frame" x="8" y="166" width="382" height="24"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Mem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrR-ab-dPS">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Offline" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0E-hx-AIM">
-                                                                <rect key="frame" x="187" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="191" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -282,25 +282,25 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZb-pc-8nz">
-                                                <rect key="frame" x="8" y="480" width="390" height="208"/>
+                                                <rect key="frame" x="8" y="480" width="398" height="208"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXn-4r-7ar">
-                                                        <rect key="frame" x="168" y="16" width="54.333333333333343" height="36"/>
+                                                        <rect key="frame" x="172" y="16" width="54.333333333333343" height="36"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agu-uT-c5X">
-                                                        <rect key="frame" x="8" y="68" width="374" height="24"/>
+                                                        <rect key="frame" x="8" y="68" width="382" height="24"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePS-Oc-PJv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Offline" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBW-n2-P56">
-                                                                <rect key="frame" x="187" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="191" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -308,16 +308,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5J-WX-sUM">
-                                                        <rect key="frame" x="8" y="108" width="374" height="24"/>
+                                                        <rect key="frame" x="8" y="108" width="382" height="24"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Given Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVY-nK-e0x">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Offline" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hx-V1-xAR">
-                                                                <rect key="frame" x="187" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="191" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -325,16 +325,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJw-eB-ghh">
-                                                        <rect key="frame" x="8" y="148" width="374" height="24"/>
+                                                        <rect key="frame" x="8" y="148" width="382" height="24"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IP Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwH-oi-KXm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Offline" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKz-ac-xZC">
-                                                                <rect key="frame" x="187" y="0.0" width="187" height="24"/>
+                                                                <rect key="frame" x="191" y="0.0" width="191" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -383,7 +383,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="58i-wK-MD6" secondAttribute="bottom" id="1cV-4Y-Tze"/>
                                     <constraint firstAttribute="trailing" secondItem="58i-wK-MD6" secondAttribute="trailing" id="5Nm-hW-d6Y"/>
-                                    <constraint firstItem="58i-wK-MD6" firstAttribute="width" secondItem="gTy-Yl-RMH" secondAttribute="width" multiplier="0.980676" id="SOa-em-dOZ"/>
+                                    <constraint firstItem="58i-wK-MD6" firstAttribute="width" secondItem="gTy-Yl-RMH" secondAttribute="width" id="SOa-em-dOZ"/>
                                     <constraint firstItem="58i-wK-MD6" firstAttribute="top" secondItem="gTy-Yl-RMH" secondAttribute="top" id="ejn-Ap-yhF"/>
                                     <constraint firstItem="58i-wK-MD6" firstAttribute="leading" secondItem="gTy-Yl-RMH" secondAttribute="leading" id="ov9-G6-PSY"/>
                                     <constraint firstItem="58i-wK-MD6" firstAttribute="height" secondItem="gTy-Yl-RMH" secondAttribute="height" priority="250" id="yqK-uY-XoO"/>
@@ -419,7 +419,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fmz-8H-SjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2762" y="1931"/>
+            <point key="canvasLocation" x="2760.8695652173915" y="1930.5803571428571"/>
         </scene>
         <!--Rice:Water Ratio-->
         <scene sceneID="4Qe-Mn-wKO">
