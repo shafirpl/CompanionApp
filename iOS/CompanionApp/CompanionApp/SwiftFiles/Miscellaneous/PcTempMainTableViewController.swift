@@ -36,6 +36,12 @@ class PcTempMainTableViewController: UITableViewController {
     func goToEditController(){
         self.editingMode = true
         self.performSegue(withIdentifier: "pcItemIdentifier", sender: self)
+        /*
+        * this is very important, if we don't set it to false, after we go to edit mode once
+        * it will always be true. So after we go to edit mode and then we click the plus button
+        * the plus button will take us to the edit mode, as we didn't set it to false
+        * I made a youtube video explaining why i had to do this.
+        */
         self.editingMode = false
     }
     

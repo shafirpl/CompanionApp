@@ -27,6 +27,8 @@ class AddNewPCViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         // print(editingMode)
         if(editingMode){
+            // this changes the title of our view controller if in editing mode
+            self.title = "Edit PC"
             pcNameLabel.text = sourceCompName
             ipAddressLabel.text = sourceIpAddress
             addPcButton.setTitle("Confirm Edit", for: .normal)

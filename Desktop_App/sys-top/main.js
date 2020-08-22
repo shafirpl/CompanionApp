@@ -15,8 +15,8 @@ const axios = require("axios");
 require("./server");
 
 // Set env
-process.env.NODE_ENV = 'development'
-// process.env.NODE_ENV = "production";
+//process.env.NODE_ENV = 'development'
+process.env.NODE_ENV = "production";
 
 
 

@@ -33,6 +33,7 @@ class ConversionMainViewController: UIViewController {
         button.layer.shadowOpacity = 1
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.lightGray.cgColor
+        // this is coming from AdditionalStuff folder with the same file name
         button.alignImageAndTitleVertically()
     }
     
